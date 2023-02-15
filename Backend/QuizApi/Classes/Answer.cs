@@ -8,6 +8,6 @@ public class Answer
         this.IsCorrect = isCorrect;
     }
 
-    public String AnswerString { get; }
-    public bool IsCorrect { get; }
+    public String AnswerString { get; } // The answers
+    public bool IsCorrect { get; } // Is the answer correct
 }
