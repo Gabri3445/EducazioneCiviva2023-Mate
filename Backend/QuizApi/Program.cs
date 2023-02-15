@@ -1,5 +1,5 @@
-using Backend.Middleware;
-using Backend.Singletons;
+using QuizApi.Middleware;
+using QuizApi.Singletons;
 
 var builder = WebApplication.CreateBuilder(args);
 

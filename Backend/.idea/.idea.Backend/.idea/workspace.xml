@@ -4,37 +4,12 @@
     <projectFile profileName="http">Backend/Backend.csproj</projectFile>
     <projectFile profileName="https">Backend/Backend.csproj</projectFile>
     <projectFile profileName="IIS Express">Backend/Backend.csproj</projectFile>
+    <projectFile profileName="http">QuizApi/QuizApi.csproj</projectFile>
+    <projectFile profileName="https">QuizApi/QuizApi.csproj</projectFile>
+    <projectFile profileName="IIS Express">QuizApi/QuizApi.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffc4ccab-31e7-437e-9bf5-47d65b65d716" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Classes/Answer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Classes/Question.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Controllers/QuizController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Middleware/AddCorsHeaderMiddleware.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Singletons/MongoDbClientSingleton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Backend.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Backend.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Backend.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/Backend.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/Backend.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/Backend.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/Backend.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/Backend.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/Backend.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/rider.project.restore.info" beforeDir="false" />
-    </list>
+    <list default="true" id="ffc4ccab-31e7-437e-9bf5-47d65b65d716" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,6 +134,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676450607198</updated>
       <workItem from="1676450626831" duration="3390000" />
+      <workItem from="1676454188137" duration="84000" />
     </task>
     <servers />
   </component>

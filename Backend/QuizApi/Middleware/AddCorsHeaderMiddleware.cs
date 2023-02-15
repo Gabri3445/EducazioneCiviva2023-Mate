@@ -1,4 +1,4 @@
-﻿namespace Backend.Middleware;
+﻿namespace QuizApi.Middleware;
 
 public class AddCorsHeaderMiddleware
 {

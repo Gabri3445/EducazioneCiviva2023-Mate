@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Backend.Classes;
-using Backend.Singletons;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.Elfie.Serialization;
 using MongoDB.Driver;
+using QuizApi.Classes;
+using QuizApi.Singletons;
 
-namespace Backend.Controllers
+namespace QuizApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

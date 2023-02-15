@@ -1,6 +1,6 @@
 ﻿using MongoDB.Driver;
 
-namespace Backend.Singletons;
+namespace QuizApi.Singletons;
 
 public class MongoDbClientSingleton
 {

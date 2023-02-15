@@ -1,4 +1,4 @@
-﻿namespace Backend.Classes;
+﻿namespace QuizApi.Classes;
 
 public class Question
 {
