@@ -1,9 +1,16 @@
-﻿namespace QuizApi.Classes;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace QuizApi.Classes;
 
 public class Question
 {
+    [BsonId]
+    public string Id;
+    
     public Question(string questionString, List<Answer> answers)
     {
+        Id = Guid.NewGuid().ToString();
         QuestionString = questionString;
         Answers = answers;
     }
