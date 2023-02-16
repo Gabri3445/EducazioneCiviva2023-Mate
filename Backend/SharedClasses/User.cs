@@ -6,18 +6,9 @@ public class User
 {
     [BsonId] public string Id;
 
-    public User(string id, List<Question> questionsToAnswer)
+    public User(string username, List<Question> questionsToAnswer)
     {
-        Id = id;
-        QuestionsToAnswer = questionsToAnswer;
-        Score = 0;
-        Questions = new List<Question>();
-        Username = "Giglo";
-    }
-
-    public User(string id, string username, List<Question> questionsToAnswer)
-    {
-        Id = id;
+        Id = Guid.NewGuid().ToString();
         Username = username;
         QuestionsToAnswer = questionsToAnswer;
         Score = 0;
