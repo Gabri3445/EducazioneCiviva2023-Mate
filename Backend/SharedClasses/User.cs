@@ -1,6 +1,6 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 
-namespace QuizApi.Classes;
+namespace SharedClasses;
 
 public class User
 {

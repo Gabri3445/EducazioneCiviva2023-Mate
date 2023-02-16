@@ -1,4 +1,4 @@
-﻿namespace QuizApi.Classes;
+﻿namespace SharedClasses;
 
 public class Answer
 {

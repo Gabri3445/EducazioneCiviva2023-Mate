@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizApi", "QuizApi\QuizApi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionAdder", "QuestionAdder\QuestionAdder.csproj", "{B690D4B9-8633-4351-AB40-2BF17540FB91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedClasses", "SharedClasses\SharedClasses.csproj", "{0C20BF8A-5D52-429E-81E5-7700466467D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{B690D4B9-8633-4351-AB40-2BF17540FB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B690D4B9-8633-4351-AB40-2BF17540FB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B690D4B9-8633-4351-AB40-2BF17540FB91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C20BF8A-5D52-429E-81E5-7700466467D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C20BF8A-5D52-429E-81E5-7700466467D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C20BF8A-5D52-429E-81E5-7700466467D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C20BF8A-5D52-429E-81E5-7700466467D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

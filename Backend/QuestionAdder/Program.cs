@@ -1,5 +1,5 @@
 ﻿using MongoDB.Driver;
-using QuizApi.Classes;
+using SharedClasses;
 
 namespace QuestionAdder;
 

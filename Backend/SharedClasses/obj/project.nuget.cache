@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KQnpprqR4NcUm/WI0KahHaODRVblbfADw49gHVRk1DCdA1AwyUUXarrZSzbA0OScgFPHCT0zNA4yyDhROgKWrQ==",
+  "dgSpecHash": "wWeIF2maKmJXOf6MzslV6YI43vmO8gXf0U70zdMrH6L6CXgvp6EUx/z2FIBlJ+DuP35n1Se9BFDOm8v2MBNooQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\QuestionAdder\\QuestionAdder.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\SharedClasses\\SharedClasses.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

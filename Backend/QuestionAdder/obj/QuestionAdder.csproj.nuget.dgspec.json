@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\QuizApi\\QuizApi.csproj": {
-                "projectPath": "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\QuizApi\\QuizApi.csproj"
+              "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\SharedClasses\\SharedClasses.csproj": {
+                "projectPath": "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\SharedClasses\\SharedClasses.csproj"
               }
             }
           }
@@ -41,6 +41,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.19.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -61,14 +67,14 @@
         }
       }
     },
-    "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\QuizApi\\QuizApi.csproj": {
+    "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\SharedClasses\\SharedClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\QuizApi\\QuizApi.csproj",
-        "projectName": "QuizApi",
-        "projectPath": "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\QuizApi\\QuizApi.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\SharedClasses\\SharedClasses.csproj",
+        "projectName": "SharedClasses",
+        "projectPath": "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\SharedClasses\\SharedClasses.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\QuizApi\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\SharedClasses\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -95,21 +101,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[7.0.2, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.19.0, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -124,9 +118,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

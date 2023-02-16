@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
-using QuizApi.Classes;
 using QuizApi.Singletons;
+using SharedClasses;
 
 namespace QuizApi.Controllers;
 
