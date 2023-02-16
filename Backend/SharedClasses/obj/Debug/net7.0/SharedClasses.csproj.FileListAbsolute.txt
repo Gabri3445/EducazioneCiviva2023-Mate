@@ -1,0 +1,12 @@
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\bin\Debug\net7.0\SharedClasses.deps.json
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\bin\Debug\net7.0\SharedClasses.dll
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\bin\Debug\net7.0\SharedClasses.pdb
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\obj\Debug\net7.0\SharedClasses.csproj.AssemblyReference.cache
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\obj\Debug\net7.0\SharedClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\obj\Debug\net7.0\SharedClasses.AssemblyInfoInputs.cache
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\obj\Debug\net7.0\SharedClasses.AssemblyInfo.cs
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\obj\Debug\net7.0\SharedClasses.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\obj\Debug\net7.0\SharedClasses.dll
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\obj\Debug\net7.0\refint\SharedClasses.dll
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\obj\Debug\net7.0\SharedClasses.pdb
+C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\SharedClasses\obj\Debug\net7.0\ref\SharedClasses.dll
