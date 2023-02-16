@@ -5,9 +5,9 @@ public class Answer
     public Answer(string answerString, bool isCorrect)
     {
         AnswerString = answerString;
-        this.IsCorrect = isCorrect;
+        IsCorrect = isCorrect;
     }
 
-    public String AnswerString { get; } // The answers
+    public string AnswerString { get; } // The answers
     public bool IsCorrect { get; } // Is the answer correct
 }
