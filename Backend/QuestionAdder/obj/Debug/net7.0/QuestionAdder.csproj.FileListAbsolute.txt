@@ -30,3 +30,35 @@ C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\QuestionAdder\obj\De
 C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\QuestionAdder\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\QuestionAdder\bin\Debug\net7.0\SharedClasses.dll
 C:\Users\gabri\Documents\GitHub\C#\EducazioneCivica\Backend\QuestionAdder\bin\Debug\net7.0\SharedClasses.pdb
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\QuestionAdder.exe
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\QuestionAdder.deps.json
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\QuestionAdder.runtimeconfig.json
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\QuestionAdder.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\QuestionAdder.pdb
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\AWSSDK.Core.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\AWSSDK.SecurityToken.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\DnsClient.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\MongoDB.Bson.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\MongoDB.Driver.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\MongoDB.Driver.Core.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\MongoDB.Libmongocrypt.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\SharpCompress.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\Snappier.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\ZstdSharp.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\SharedClasses.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\bin\Debug\net7.0\SharedClasses.pdb
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\obj\Debug\net7.0\QuestionAdder.csproj.AssemblyReference.cache
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\obj\Debug\net7.0\QuestionAdder.GeneratedMSBuildEditorConfig.editorconfig
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\obj\Debug\net7.0\QuestionAdder.AssemblyInfoInputs.cache
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\obj\Debug\net7.0\QuestionAdder.AssemblyInfo.cs
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\obj\Debug\net7.0\QuestionAdder.csproj.CoreCompileInputs.cache
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\obj\Debug\net7.0\QuestionAdder.csproj.CopyComplete
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\obj\Debug\net7.0\QuestionAdder.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\obj\Debug\net7.0\refint\QuestionAdder.dll
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\obj\Debug\net7.0\QuestionAdder.pdb
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\obj\Debug\net7.0\QuestionAdder.genruntimeconfig.cache
+S:\Github Projects\EducazioneCiviva2023-Mate\Backend\QuestionAdder\obj\Debug\net7.0\ref\QuestionAdder.dll

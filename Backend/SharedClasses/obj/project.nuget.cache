@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wWeIF2maKmJXOf6MzslV6YI43vmO8gXf0U70zdMrH6L6CXgvp6EUx/z2FIBlJ+DuP35n1Se9BFDOm8v2MBNooQ==",
+  "dgSpecHash": "T3OGpRggplicN7si9oPXUr7faQph3MS4difXhE787SLhEQHkUr0itWI7ZEc45zI5IOt7cY6A0qcdr5D2YGexhA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabri\\Documents\\GitHub\\C#\\EducazioneCivica\\Backend\\SharedClasses\\SharedClasses.csproj",
+  "projectFilePath": "S:\\Github Projects\\EducazioneCiviva2023-Mate\\Backend\\SharedClasses\\SharedClasses.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

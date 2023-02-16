@@ -16,21 +16,21 @@ public static class Program
         {
             Console.WriteLine("Domanda");
             var question = Console.ReadLine() ?? string.Empty;
-            Console.WriteLine("Numero di risposte");
-            var num = int.Parse(Console.ReadLine() ?? string.Empty);
-            var answers = new List<Answer>();
-            for (var i = 0; i < num; i++)
-            {
-                Console.WriteLine("Risposta");
-                var answer = Console.ReadLine() ?? string.Empty;
-                Console.WriteLine("Vera? 0 vero, 1 falso");
-                var isTrue = int.Parse(Console.ReadLine() ?? string.Empty) == 0;
-                answers.Add(new Answer(answer, isTrue));
-            }
-
-            questions.Add(new Question(question, answers));
-            Console.WriteLine("0 to continue");
-            exit = int.Parse(Console.ReadLine() ?? string.Empty) == 0;
+                Console.WriteLine("Numero di risposte");
+                var num = int.Parse(Console.ReadLine() ?? string.Empty);
+                var answers = new List<Answer>();
+                for (var i = 0; i < num; i++)
+                {
+                    Console.WriteLine("Risposta");
+                    var answer = Console.ReadLine() ?? string.Empty;
+                    Console.WriteLine("Vera? 0 vero, 1 falso");
+                    var isTrue = int.Parse(Console.ReadLine() ?? string.Empty) == 0;
+                    answers.Add(new Answer(answer, isTrue));
+                }
+                Console.WriteLine("0 to continue");
+                exit = int.Parse(Console.ReadLine() ?? string.Empty) == 0;
+                questions.Add(new Question(question, answers));
+            
         } while (exit);
 
         await questionsDatabase.InsertManyAsync(questions);
