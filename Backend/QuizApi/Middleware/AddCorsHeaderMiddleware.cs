@@ -20,4 +20,3 @@ public class AddCorsHeaderMiddleware
         await _next(context);
     }
 }
-
