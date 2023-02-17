@@ -24,7 +24,12 @@ public static class Program
                     var answer = Console.ReadLine() ?? string.Empty;
                     Console.WriteLine("Vera? 0 vero, 1 falso");
                     var isTrue = int.Parse(Console.ReadLine() ?? string.Empty) == 0;
-                    answers.Add(new Answer(answer, isTrue));
+                    var explanation = "";
+                    if (isTrue)
+                    {
+                        explanation = Console.ReadLine() ?? String.Empty;
+                    }
+                    answers.Add(new Answer(answer, isTrue, explanation));
                 }
                 Console.WriteLine("0 to continue");
                 exit = int.Parse(Console.ReadLine() ?? string.Empty) == 0;

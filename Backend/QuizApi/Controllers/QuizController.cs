@@ -51,6 +51,9 @@ public class QuizController : ControllerBase
     }
 
     [HttpGet("GetQuestion")]
+    [ProducesResponseType(200)]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(404)]
     public ActionResult<GetQuestionResponse> GetQuestion(string userGuid)
     {
         if (!Guid.TryParse(userGuid, out _))
@@ -81,5 +84,41 @@ public class QuizController : ControllerBase
         var update = Builders<User>.Update.Inc(x => x.NextQuestion, 1);
         _userCollection.UpdateOne(filter, update);
         return Ok(new GetQuestionResponse(question.QuestionString, answerList));
+    }
+
+    [HttpPut("SendAnswer")]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(404)]
+    [ProducesResponseType(200)]
+    public ActionResult<SendAnswerResponse> SendAnswer(SendAnswerRequest sendAnswerRequest)
+    {
+        if (!Guid.TryParse(sendAnswerRequest.UserGuid, out _))
+        {
+            return BadRequest();
+        }
+
+        var user = _userCollection
+            .AsQueryable()
+            .FirstOrDefault(x => x.Id == sendAnswerRequest.UserGuid);
+        
+        if (user == null)
+        {
+            return NotFound();
+        }
+        
+        var question = user.QuestionsToAnswer[user.NextQuestion];
+
+        var correctAnswer = question.Answers[sendAnswerRequest.AnswerIndex].IsCorrect;
+
+        var explanation = string.Empty;
+
+        return Ok(new SendAnswerResponse(correctAnswer, explanation));
+    }
+
+    [HttpGet("GetLeaderBoard")]
+    public ActionResult<GetLeaderBoardResponse> GetLeaderBoard()
+    {
+        var queryableCollection = _userCollection.AsQueryable();
+        
     }
 }
