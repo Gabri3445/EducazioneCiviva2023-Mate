@@ -2,45 +2,51 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Ed. civica</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js" integrity="sha512-3WFaXQUsbGieECwv3t3DvyAkZ7pp+/rIKOQnx7NKhfwIF0u2l+DYsE2eF635ewJVj3YTU4/Ug6UqEkSTZCiSew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./static/js/index.js"></script>
-    <script src="./static/libs/p5js/p5.min.js"></script>
-    <link rel="stylesheet" href="./style/index.css">
+    <link href="./style/index.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="navMenu">
-            <h1>QUIZ SULLA PROTEZIONE CIVILE</h1>
-            <div id="quiz-content">
-                <div id="quiz">
-                    <p class="question">sus</p>
+<div class="registration">
+    <form>
+        <label for="username">Username</label>
+        <input type="text" required id="username" name="username" placeholder="Inserisci un username">
+        <input type="submit" class="submit">
+    </form>
+    <a href="https://github.com/Gabri3445/EducazioneCiviva2023-Mate"><img src="./static/images/github-mark.svg"></a>
+</div>
+<div class="container">
+    <div class="left-arrow"><-</div>
+    <div class="navMenu">
+        <h1>QUIZ SULLA PROTEZIONE CIVILE</h1>
+        <div id="quiz-content">
+            <div id="quiz">
+                <p class="question">Cosa accade alle competenze dello Stato in materia di protezione civile, con la Legge 	N.401 del 2001?</p>
 
-                    <div class="multiple-answers">
-                        <label class="answers">
-                            <input name="answer" type="radio" />giglo0
+                <div class="multiple-answers">
+                    <label class="answers">
+                        <input name="answer" type="radio"/>-Le competenze dello Stato in materia di protezione civile vengono abolite da parte del 	presidente del Consiglio e viene ricondotta invece la noenata Agenzia di Protezione 	Civile e il Dipartimento della Protezione Civile viene ripristinato.
+                    </label>
 
-                            <label class="answers">
-                                <input name="answer" type="radio" />giglo1
-                            </label>
+                    <label class="answers">
+                        <input name="answer" type="radio"/>-Le competenze dello Stato in materia di protezione civile assieme alla neonata Agenzia 	di Protezione Civile vengono abolite e il Dipartimento della Protezione Civile viene ripristinato.
+                    </label>
 
-                            <label class="answers">
-                                <input name="answer" type="radio" />giglo2
-                            </label>
+                    <label class="answers">
+                        <input name="answer" type="radio"/>-Le competenze dello Stato in materia di protezione civile vengono ricondotte 	da parte del presidente del Consiglio e viene abolita invece la noenata Agenzia di 	Protezione Civile, inoltre il Dipartimento della Protezione Civile viene ripristinato.
+                    </label>
 
-                            <label class="answers">
-                                <input name="answer" type="radio" />giglo3
-                            </label>
-                        </label>
-                    </div>
-
-                    <p>barilla ipsum punto come bla bla bla</p>
+                    <label class="answers">
+                        <input name="answer" type="radio"/>-Le competenze dello Stato in materia di protezione civile assieme alla neonata Agenzia 	di Protezione Civile vengono ricondotte, inoltre il Dipartimento della Protezione Civile viene ripristinato.
+                    </label>
                 </div>
+                    <p class="complete-answer">barilla ipsum punto come bla bla bla</p>
             </div>
         </div>
     </div>
-    
+    <div class="right-arrow">-></div>
+</div>
+<script src="./static/js/index.js"></script>
 </body>
 </html>
