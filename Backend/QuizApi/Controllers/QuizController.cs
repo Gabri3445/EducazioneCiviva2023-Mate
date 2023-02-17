@@ -67,7 +67,7 @@ public class QuizController : ControllerBase
             return NotFound();
         }
 
-        var question = user.Questions[user.NextQuestion];
+        var question = user.QuestionsToAnswer[user.NextQuestion];
         user.NextQuestion++;
 
         List<string> answerList = new List<string>();

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson.Serialization.Attributes;
 
 namespace SharedClasses;
 
@@ -19,12 +17,17 @@ public class User
     }
 
     public List<Question> Questions { get; set; }
-    
+
     public int Score { get; set; }
-    
+
     public int NextQuestion { get; set; }
-    
+
     public string Username { get; set; }
-    
-    public List<Question> QuestionsToAnswer { get; set; } // Make a list of all the answers and randomize the order of them and assign them here
+
+    public List<Question>
+        QuestionsToAnswer
+    {
+        get;
+        set;
+    } // Make a list of all the answers and randomize the order of them and assign them here
 }
