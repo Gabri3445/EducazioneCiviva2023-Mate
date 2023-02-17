@@ -5,13 +5,12 @@ namespace QuestionAdder;
 
 public static class Program
 {
-    public static async Task Main(string[] args)
+    public static void Main(string[] args)
     {
         var client = new MongoClient("mongodb://localhost:27017");
         var database = client.GetDatabase("eduCiv");
         var questionsDatabase = database.GetCollection<Question>("questions");
         var exit = false;
-        var questions = new List<Question>();
         do
         {
             Console.WriteLine("Domanda");
@@ -29,10 +28,7 @@ public static class Program
                 }
                 Console.WriteLine("0 to continue");
                 exit = int.Parse(Console.ReadLine() ?? string.Empty) == 0;
-                questions.Add(new Question(question, answers));
-            
+                questionsDatabase.InsertOne(new Question(question, answers));
         } while (exit);
-
-        await questionsDatabase.InsertManyAsync(questions);
     }
 }

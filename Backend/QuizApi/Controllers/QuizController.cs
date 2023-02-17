@@ -33,13 +33,53 @@ public class QuizController : ControllerBase
     }
 
     [HttpPost("CreateUser")]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(200)]
     public ActionResult<CreateUserResponse> CreateUser([FromBody] CreateUserRequest createUserRequest)
     {
-        List<Question> questions = _questionCollection.AsQueryable()
+        if (createUserRequest.Username.Equals(""))
+        {
+            return BadRequest();
+        }
+        var questions = _questionCollection.AsQueryable()
             .Where(x => true)
             .OrderBy(x => Guid.NewGuid())
             .ToList();
-        User user = new User(createUserRequest.Username, questions);
+        var user = new User(createUserRequest.Username, questions);
+        _userCollection.InsertOne(user);
         return Ok(new CreateUserResponse(user.Id));
+    }
+
+    [HttpGet("GetQuestion")]
+    public ActionResult<GetQuestionResponse> GetQuestion(string userGuid)
+    {
+        if (!Guid.TryParse(userGuid, out _))
+        {
+            return BadRequest();
+        }
+
+        var user = _userCollection
+            .AsQueryable()
+            .FirstOrDefault(x => x.Id == userGuid);
+        
+        if (user == null)
+        {
+            return NotFound();
+        }
+
+        var question = user.Questions[user.NextQuestion];
+        user.NextQuestion++;
+
+        List<string> answerList = new List<string>();
+
+        foreach (var answer in question.Answers)
+        {
+            answerList.Add(answer.AnswerString);
+        }
+
+        var filter = Builders<User>.Filter.Eq(x => x.Id, userGuid);
+        var update = Builders<User>.Update.Inc(x => x.NextQuestion, 1);
+        _userCollection.UpdateOne(filter, update);
+        return Ok(new GetQuestionResponse(question.QuestionString, answerList));
     }
 }

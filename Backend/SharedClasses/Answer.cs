@@ -1,4 +1,6 @@
-﻿namespace SharedClasses;
+﻿using MongoDB.Bson.Serialization.Attributes;
+
+namespace SharedClasses;
 
 public class Answer
 {
@@ -6,8 +8,15 @@ public class Answer
     {
         AnswerString = answerString;
         IsCorrect = isCorrect;
+        Selected = false;
     }
 
-    public string AnswerString { get; } // The answers
-    public bool IsCorrect { get; } // Is the answer correct
+    [BsonElement("answerString")]
+    public string AnswerString { get; set; } // The answers
+    
+    [BsonElement("isCorrect")]
+    public bool IsCorrect { get; set; } // Is the answer correct
+    
+    [BsonElement("selected")]
+    public bool Selected { get; set; }
 }

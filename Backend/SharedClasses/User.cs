@@ -1,4 +1,6 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using System;
+using System.Collections.Generic;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace SharedClasses;
 
@@ -12,12 +14,15 @@ public class User
         Username = username;
         QuestionsToAnswer = questionsToAnswer;
         Score = 0;
+        NextQuestion = 0;
         Questions = new List<Question>();
     }
 
     public List<Question> Questions { get; set; }
     
     public int Score { get; set; }
+    
+    public int NextQuestion { get; set; }
     
     public string Username { get; set; }
     
