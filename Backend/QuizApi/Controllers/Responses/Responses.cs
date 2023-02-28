@@ -1,6 +1,4 @@
-﻿using SharedClasses;
-
-namespace QuizApi.Controllers.Responses;
+﻿namespace QuizApi.Controllers.Responses;
 
 public class CreateUserResponse
 {
@@ -33,7 +31,7 @@ public class SendAnswerResponse
     }
 
     public bool CorrectAnswer { get; set; }
-    
+
     public string Explanation { get; set; }
 }
 
@@ -46,6 +44,6 @@ public class GetLeaderBoardResponse
     }
 
     public List<string> Usernames { get; set; }
-    
+
     public List<int> Scores { get; set; }
 }

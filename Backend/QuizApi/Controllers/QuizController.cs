@@ -37,11 +37,9 @@ public class QuizController : ControllerBase
     [ProducesResponseType(200)]
     public ActionResult<CreateUserResponse> CreateUser([FromBody] CreateUserRequest createUserRequest)
     {
-        if (createUserRequest.Username.Equals(""))
-        {
-            return BadRequest();
-        }
-        var questions = _questionCollection.AsQueryable()
+        if (createUserRequest.Username.Equals("")) return BadRequest();
+        var questions = _questionCollection
+            .AsQueryable()
             .Where(x => true)
             .OrderBy(x => Guid.NewGuid())
             .ToList();
@@ -56,29 +54,18 @@ public class QuizController : ControllerBase
     [ProducesResponseType(404)]
     public ActionResult<GetQuestionResponse> GetQuestion(string userGuid)
     {
-        if (!Guid.TryParse(userGuid, out _))
-        {
-            return BadRequest();
-        }
+        if (!Guid.TryParse(userGuid, out _)) return BadRequest();
 
         var user = _userCollection
             .AsQueryable()
             .FirstOrDefault(x => x.Id == userGuid);
-        
-        if (user == null)
-        {
-            return NotFound();
-        }
+
+        if (user == null) return NotFound();
 
         var question = user.QuestionsToAnswer[user.NextQuestion];
         user.NextQuestion++;
 
-        List<string> answerList = new List<string>();
-
-        foreach (var answer in question.Answers)
-        {
-            answerList.Add(answer.AnswerString);
-        }
+        var answerList = question.Answers.Select(answer => answer.AnswerString).ToList();
 
         var filter = Builders<User>.Filter.Eq(x => x.Id, userGuid);
         var update = Builders<User>.Update.Inc(x => x.NextQuestion, 1);
@@ -92,20 +79,14 @@ public class QuizController : ControllerBase
     [ProducesResponseType(200)]
     public ActionResult<SendAnswerResponse> SendAnswer(SendAnswerRequest sendAnswerRequest)
     {
-        if (!Guid.TryParse(sendAnswerRequest.UserGuid, out _))
-        {
-            return BadRequest();
-        }
+        if (!Guid.TryParse(sendAnswerRequest.UserGuid, out _)) return BadRequest();
 
         var user = _userCollection
             .AsQueryable()
             .FirstOrDefault(x => x.Id == sendAnswerRequest.UserGuid);
-        
-        if (user == null)
-        {
-            return NotFound();
-        }
-        
+
+        if (user == null) return NotFound();
+
         var question = user.QuestionsToAnswer[user.NextQuestion];
 
         var correctAnswer = question.Answers[sendAnswerRequest.AnswerIndex].IsCorrect;
@@ -118,7 +99,8 @@ public class QuizController : ControllerBase
     [HttpGet("GetLeaderBoard")]
     public ActionResult<GetLeaderBoardResponse> GetLeaderBoard()
     {
-        var queryableCollection = _userCollection.AsQueryable()
+        var queryableCollection = _userCollection
+            .AsQueryable()
             .OrderBy(x => x.Score)
             .Select(x => new {x.Username, x.Score})
             .ToList();
