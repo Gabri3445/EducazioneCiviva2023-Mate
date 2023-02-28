@@ -99,13 +99,13 @@ public class QuizController : ControllerBase
     [HttpGet("GetLeaderBoard")]
     public ActionResult<GetLeaderBoardResponse> GetLeaderBoard()
     {
-        var queryableCollection = _userCollection
+        var leaderboard = _userCollection
             .AsQueryable()
             .OrderBy(x => x.Score)
             .Select(x => new {x.Username, x.Score})
             .ToList();
-        var usernames = queryableCollection.Select(x => x.Username).ToList();
-        var scores = queryableCollection.Select(x => x.Score).ToList();
+        var usernames = leaderboard.Select(x => x.Username).ToList();
+        var scores = leaderboard.Select(x => x.Score).ToList();
         return Ok(new GetLeaderBoardResponse(usernames, scores));
     }
 }
