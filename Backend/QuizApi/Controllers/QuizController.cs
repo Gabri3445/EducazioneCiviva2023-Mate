@@ -97,6 +97,7 @@ public class QuizController : ControllerBase
     }
 
     [HttpGet("GetLeaderBoard")]
+    [ProducesResponseType(200)]
     public ActionResult<GetLeaderBoardResponse> GetLeaderBoard()
     {
         var leaderboard = _userCollection
