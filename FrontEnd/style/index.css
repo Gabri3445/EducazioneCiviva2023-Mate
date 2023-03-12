@@ -3,6 +3,10 @@
     font-family: Verdana, serif;
 }
 
+body.darken {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .registration {
     width: 300px;
     height: 400px;
@@ -19,6 +23,10 @@
     flex-direction: column;
     border: 5px solid #00ffa5;
     text-align: center;
+}
+
+.hidden {
+    display: none !important;
 }
 
 input[type=submit] {
@@ -49,16 +57,13 @@ input[type=text] {
     min-width: 750px;
 }
 
-.left-arrow {
-    width: 4%;
-    height: 10%;
-    background: red;
+.left-arrow:hover {
+    width: 1%;
+    cursor: pointer;
 }
 
 .right-arrow {
-    width: 4%;
-    height: 10%;
-    background: red;
+    cursor: pointer;
 }
 
 .navMenu {
@@ -106,7 +111,7 @@ input[type=text] {
 }
 
 .answers {
-    transition: all .7s;
+    transition: all .2s;
 }
 
 .multiple-answers {

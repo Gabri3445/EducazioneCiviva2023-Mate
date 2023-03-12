@@ -1,12 +1,13 @@
 let barillas = document.querySelectorAll(".answers")
-var submit = document.getElementsByTagName('input')
-let registration = document.querySelector(".registration")
+let form = document.getElementById("form")
 
 barillas.forEach(element => element.addEventListener("click", () => {
     barillas.forEach(giglo => giglo.classList.remove("selected"))
     element.classList.add("selected")
 }))
 
-if(submit.hasAttribute('required')){
-    registration.style.display = "none"
-}
+form.addEventListener("submit", function(e){
+    e.preventDefault()
+    form.parentNode.classList.add("hidden")
+    document.querySelector("body").classList.remove("darken")
+})
