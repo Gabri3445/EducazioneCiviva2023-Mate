@@ -44,7 +44,9 @@ async function ping() {
 }
 
 /*
-id: "string"
+{
+    id: "string"
+}
  */
 async function createUser(username) {
     let createUrl = url + "CreateUser"
