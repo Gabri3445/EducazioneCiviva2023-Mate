@@ -96,9 +96,9 @@ public class QuizController : ControllerBase
         return Ok(new SendAnswerResponse(correctAnswer, explanation));
     }
 
-    [HttpGet("GetLeaderBoard")]
+    [HttpGet("GetLeaderboard")]
     [ProducesResponseType(200)]
-    public ActionResult<GetLeaderBoardResponse> GetLeaderBoard()
+    public ActionResult<GetLeaderBoardResponse> GetLeaderboard()
     {
         var leaderboard = _userCollection
             .AsQueryable()
