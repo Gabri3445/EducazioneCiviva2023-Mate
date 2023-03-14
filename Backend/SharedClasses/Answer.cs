@@ -6,15 +6,11 @@ public class Answer
     {
         AnswerString = answerString;
         IsCorrect = isCorrect;
-        Selected = false;
         Explanation = explanation;
     }
 
     public string AnswerString { get; set; } // The answer
 
     public bool IsCorrect { get; set; } // Is the answer correct
-
-    public bool Selected { get; set; }
-
     public string Explanation { get; set; }
 }
