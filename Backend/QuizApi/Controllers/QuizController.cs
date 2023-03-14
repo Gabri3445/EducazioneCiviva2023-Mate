@@ -43,6 +43,10 @@ public class QuizController : ControllerBase
             .Where(x => true)
             .OrderBy(x => Guid.NewGuid())
             .ToList();
+        foreach (var question in questions)
+        {
+            question.Answers = question.Answers.OrderBy(x => Guid.NewGuid()).ToList();
+        }
         var user = new User(createUserRequest.Username, questions);
         _userCollection.InsertOne(user);
         return Ok(new CreateUserResponse(user.Id));
@@ -89,11 +93,19 @@ public class QuizController : ControllerBase
 
         var question = user.QuestionsToAnswer[user.NextQuestion];
 
-        var correctAnswer = question.Answers[sendAnswerRequest.AnswerIndex].IsCorrect;
-
+        var isCorrect = question.Answers[sendAnswerRequest.AnswerIndex].IsCorrect;
+        
         var explanation = string.Empty;
-
-        return Ok(new SendAnswerResponse(correctAnswer, explanation));
+        
+        if (isCorrect)
+        {
+            var filter = Builders<User>.Filter.Eq(x => x.Id, sendAnswerRequest.UserGuid);
+            var update = Builders<User>.Update.Inc(x => x.Score, 1);
+            _userCollection.UpdateOne(filter, update);
+            explanation = question.Answers[sendAnswerRequest.AnswerIndex].Explanation;
+        }
+        
+        return Ok(new SendAnswerResponse(isCorrect, explanation));
     }
 
     [HttpGet("GetLeaderboard")]
