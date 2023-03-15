@@ -1,501 +1,522 @@
-[{
-  "_id": "1c2ed71d-d1b0-4f12-b0e6-54859f9158b2",
-  "QuestionString": "Quali sono le calamità che hanno colpito l'Italia e che hanno portato? alla creazione del Sistema di Protezione Civile?",
-  "Answers": [
-    {
-      "AnswerString": "Terremoti e alluvioni",
-      "IsCorrect": true,
-      "Explanation": "Le calamità che hanno portato alla creazione del Sistema di Protezione Civile sono state i terremoti e le alluvioni, che hanno causato gravi danni e vittime nel territorio italiano."
-    },
-    {
-      "AnswerString": "Incendi e smog",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Inondazioni e siccità",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Grandine e neve",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "479612f5-5b62-4750-89ad-01bda02269a8",
-  "QuestionString": "Quali sono le radici storiche dell'idea di protezione civile in Italia?",
-  "Answers": [
-    {
-      "AnswerString": "Ordini religiosi medievali",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Strutture laiche come le Misericordie",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "I Vigili del Fuoco",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Tutte le precedenti",
-      "IsCorrect": true,
-      "Explanation": "Le radici storiche dell'idea di protezione civile in Italia risalgono agli ordini religiosi medievali, alle strutture laiche come le Misericordie e ai Vigili del Fuoco, che si occupavano di assistere i bisognosi e prevenire o spegnere gli incendi."
-    }
-  ]
-},{
-  "_id": "1e34926e-9792-4a6f-83f3-6e5ae92810ae",
-  "QuestionString": "Quali erano le autorità preposte ai soccorsi prima dell'Unità d'Italia?",
-  "Answers": [
-    {
-      "AnswerString": "I commissari centrali",
-      "IsCorrect": true,
-      "Explanation": "Le autorità preposte ai soccorsi prima dell'Unità d'Italia erano i commissari centrali, nominati dal governo centrale per coordinare gli interventi nelle zone colpite da calamità naturali o belliche."
-    },
-    {
-      "AnswerString": "I sindaci delle città colpite",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Le organizzazioni solidaristiche",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Nessuna delle precedenti",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "f91357d4-6183-4a37-a050-4ea7f341d37b",
-  "QuestionString": "In quale regione italiana fu progettata la prima casa antisismica del mondo occidentale?",
-  "Answers": [
-    {
-      "AnswerString": "Lombardia",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Veneto",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Marche",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Mantova",
-      "IsCorrect": true,
-      "Explanation": "La prima casa antisismica del mondo occidentale fu progettata da Pirro Ligorio nel Ducato di Mantova, per resistere ai terremoti che avevano colpito la regione nel XVI secolo."
-    }
-  ]
-},{
-  "_id": "a7074a95-6f04-4067-a381-7f05972f33b6",
-  "QuestionString": "Cosa si intende per \"generosità pubblica\" nell'ambito dei soccorsi?",
-  "Answers": [
-    {
-      "AnswerString": "Il soccorso fornito dallo Stato",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Il soccorso fornito dalle organizzazioni solidaristiche",
-      "IsCorrect": true,
-      "Explanation": "Per \"generosità pubblica\" si intende il soccorso fornito dalle organizzazioni solidaristiche, come le Misericordie, la Croce Rossa, il Comitato Italiano per l'Assistenza ai Profughi e altre associazioni caritative o umanitarie."
-    },
-    {
-      "AnswerString": "Il soccorso fornito dalle forze dell'ordine",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Il soccorso fornito dai militari",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "5bb5de9e-a72f-422d-9099-562dd1dd7add",
-  "QuestionString": "Quali furono i primi soccorritori a intervenire durante l'alluvione di Roma del dicembre 1870?",
-  "Answers": [
-    {
-      "AnswerString": "Le organizzazioni solidaristiche",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Le forze dell'ordine",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Le truppe dell'esercito",
-      "IsCorrect": true,
-      "Explanation": "I primi soccorritori a intervenire durante l'alluvione di Roma del dicembre 1870 furono le truppe dell'esercito, che si occuparono di evacuare i cittadini dalle zone allagate e ripristinare la viabilità e i servizi essenziali."
-    },
-    {
-      "AnswerString": "Nessuna delle precedenti",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "d94dd999-a47d-41fd-8386-b5dd0a389f24",
-  "QuestionString": "Qual è il fondamento normativo per gli interventi urgenti adottati in caso di emergenza?",
-  "Answers": [
-    {
-      "AnswerString": "La Legge n. 2359 del 25 giugno 1865",
-      "IsCorrect": true,
-      "Explanation": "Il fondamento normativo per gli interventi urgenti adottati in caso di emergenza è la Legge n. 2359 del 25 giugno 1865, che stabilisce il potere straordinario del governo centrale di intervenire nelle situazioni di grave necessità pubblica o pericolo imminente."
-    },
-    {
-      "AnswerString": "Il Decreto Legislativo n. 99 del 2004",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "La Costituzione italiana",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Nessuna delle precedenti",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "b98c9c5f-2fdc-4ffb-8e87-6ebdcec1a234",
-  "QuestionString": "Chi è il responsabile dell'iter di gestione delle emergenze?",
-  "Answers": [
-    {
-      "AnswerString": "Il Presidente della Repubblica",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Il Presidente del Consiglio",
-      "IsCorrect": true,
-      "Explanation": "Il responsabile dell'iter di gestione delle emergenze è il Presidente del Consiglio, che coordina il Dipartimento della Protezione Civile e nomina eventualmente un Commissario delegato per l'emergenza."
-    },
-    {
-      "AnswerString": "Il Ministro dell'Interno",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Il Prefetto della città colpita",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "593ca6f0-8ba2-4d89-98b5-76177a9c4aa1",
-  "QuestionString": "Quando le emergenze vengono considerate nazionali?",
-  "Answers": [
-    {
-      "AnswerString": "Quando colpiscono obiettivi strategici per la viabilità e le strutture di pubblica utilità",
-      "IsCorrect": true,
-      "Explanation": "Le emergenze vengono considerate nazionali quando colpiscono obiettivi strategici per la viabilità e le strutture di pubblica utilità, come ponti, strade, ospedali e scuole."
-    },
-    {
-      "AnswerString": "Quando colpiscono più di una regione",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Quando colpiscono la capitale",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Nessuna delle precedenti",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "86447007-19ee-46cb-a7c6-bfd8824ce9fa",
-  "QuestionString": "Cosa hanno in comune le organizzazioni solidaristiche e di volontariato menzionate nella storia?",
-  "Answers": [
-    {
-      "AnswerString": "Sono nate tutte tra il 200 e il 300",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Hanno tutte contribuito a portare aiuto in occasione di grandi emergenze",
-      "IsCorrect": true,
-      "Explanation": "Le organizzazioni solidaristiche e di volontariato menzionate nella storia hanno tutte contribuito a portare aiuto in occasione di grandi emergenze come terremoti, alluvioni e epidemie. Alcune di queste organizzazioni sono la Croce Rossa, la Protezione Civile e i Vigili del Fuoco."
-    },
-    {
-      "AnswerString": "Sono tutte ordini religiosi medievali",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Sono tutte presenti nelle valli alpine",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "8cee3c0c-baae-40b7-93f2-835c8314cb5a",
-  "QuestionString": "In quale stato sono state introdotte le prime norme antisismiche?",
-  "Answers": [
-    {
-      "AnswerString": "Regno delle Due Sicilie",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Stato Pontificio",
-      "IsCorrect": true,
-      "Explanation": "Lo Stato Pontificio fu il primo a introdurre le prime norme antisismiche nel 1783, dopo il terremoto che colpì la Calabria e la Sicilia. Le norme stabilivano criteri di progettazione e costruzione per le nuove case e gli edifici pubblici."
-    },
-    {
-      "AnswerString": "Ducato di Mantova",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Regno di Sardegna",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "a9acaa11-2a06-4b7a-b61f-3da75ee955fe",
-  "QuestionString": "Qual è stato il primo paese al mondo occidentale a progettare una casa antisismica?",
-  "Answers": [
-    {
-      "AnswerString": "Italia",
-      "IsCorrect": true,
-      "Explanation": "L'Italia fu il primo paese al mondo occidentale a progettare una casa antisismica nel 1570, dopo il terremoto che devastò Ferrara. L'architetto Pirro Ligorio disegnò una casa con pareti rinforzate, solai leggeri e fondamenta solide."
-    },
-    {
-      "AnswerString": "Francia",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Spagna",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Germania",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "b43a3685-286e-4f60-ab54-bba9222ee05c",
-  "QuestionString": "Cosa non è compito prioritario dello Stato in caso di calamità?",
-  "Answers": [
-    {
-      "AnswerString": "Dare aiuto e soccorrere le popolazioni sinistrate",
-      "IsCorrect": true,
-      "Explanation": "Considerare gli interventi dei militari opere di beneficenza non è compito prioritario dello Stato in caso di calamità. Lo Stato deve invece garantire l'aiuto e il soccorso alle popolazioni sinistrate, prevenire le calamità e mobilitare l'esercito se necessario."
-    },
-    {
-      "AnswerString": "Prevenire le calamità",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Mobilitare l'esercito",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Considerare gli interventi dei militari opere di beneficenza",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "e5987fba-62b2-4cf9-b92c-6c7a88157916",
-  "QuestionString": "Durante quale calamità le truppe dell'esercito hanno offerto i primi soccorsi?",
-  "Answers": [
-    {
-      "AnswerString": "Terremoto in Calabria",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Alluvione di Roma del dicembre 1870",
-      "IsCorrect": true,
-      "Explanation": "Le truppe dell'esercito hanno offerto i primi soccorsi durante l'alluvione di Roma del dicembre 1870, che causò gravi danni alla città e alle sue infrastrutture. I soldati furono impiegati per riparare i ponti, sgomberare le strade e assistere i cittadini."
-    },
-    {
-      "AnswerString": "Terremoto della Val di Noto",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Terremoto di Ferrara del 1570",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "7d190d22-a625-4f13-9f00-9655c36dda0f",
-  "QuestionString": "Cosa si intende per sussidiarietà nella materia della protezione civile?",
-  "Answers": [
-    {
-      "AnswerString": "Il trasferimento di importanti competenze alle autonomie locali",
-      "IsCorrect": true,
-      "Explanation": "Il principio di sussidiarietà è stato recepito nell'ordinamento italiano con l'art. 118 della Costituzione, che prevede che lo Stato favorisca l'autonomia delle entità locali"
-    },
-    {
-      "AnswerString": "La predisposizione dei programmi di previsione e prevenzione dei rischi da parte delle Regioni",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "L'attuazione degli interventi urgenti da parte delle Province",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "La predisposizione dei piani comunali di emergenza da parte dei Comuni",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "84980963-0228-4895-ac63-6772a3209684",
-  "QuestionString": "Chi si occupa dell'indirizzo, della promozione e del coordinamento delle attività in materia di protezione civile?",
-  "Answers": [
-    {
-      "AnswerString": "Le Regioni",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Gli enti locali",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Lo Stato",
-      "IsCorrect": true,
-      "Explanation": "Lo Stato ha il compito di indirizzare, promuovere e coordinare le attività in materia di protezione civile, secondo il decreto legislativo n. 1 del 2018"
-    },
-    {
-      "AnswerString": "L'Agenzia di Protezione Civile",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "e6db9ebf-95d6-4b1c-8a89-0e280c1f7709",
-  "QuestionString": "Quali sono le funzioni affidate alle Regioni in materia di protezione civile?",
-  "Answers": [
-    {
-      "AnswerString": "La predisposizione dei programmi di previsione e prevenzione dei rischi",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "L'attuazione degli interventi urgenti",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "L'organizzazione e l'impiego del volontariato",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Tutte le precedenti",
-      "IsCorrect": true,
-      "Explanation": "Le Regioni hanno funzioni di predisposizione dei programmi di previsione e prevenzione dei rischi, di attuazione degli interventi urgenti e di organizzazione e impiego del volontariato, secondo il decreto legislativo n. 1 del 2018"
-    }
-  ]
-},{
-  "_id": "1304a198-70f2-4c94-bbca-9821e4d0e02b",
-  "QuestionString": "Chi attua a livello provinciale le attività di previsione e prevenzione dei rischi?",
-  "Answers": [
-    {
-      "AnswerString": "Le regioni",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Gli enti locali",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Le Province",
-      "IsCorrect": true,
-      "Explanation": "Le Province sono responsabili dell'attuazione a livello provinciale delle attività di previsione e prevenzione dei rischi, secondo il decreto legislativo n. 1 del 2018"
-    },
-    {
-      "AnswerString": "I Comuni",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "54b7bd34-ce38-43b1-87af-0a5b6cf13f9c",
-  "QuestionString": "Cosa prevede la riforma del Titolo V della Costituzione in materia di protezione civile?",
-  "Answers": [
-    {
-      "AnswerString": "Inserisce la protezione civile tra le materie a legislazione esclusiva",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Inserisce la protezione civile tra le materie a legislazione concorrente",
-      "IsCorrect": true,
-      "Explanation": "La riforma del Titolo V della Costituzione ha modificato l'art. 117 stabilendo che lo Stato ha legislazione esclusiva solo sulle norme generali sulla protezione civile e sul coordinamento delle attività in caso di calamità naturali o provocate dall'uomo"
-    },
-    {
-      "AnswerString": "Elimina la figura del Commissario di Governo",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Tutte le precedenti",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-},{
-  "_id": "44139d32-1431-44ac-88c0-c5595bce7db6",
-  "QuestionString": "Cosa prevede il decreto legislativo n. 300 del 1999?",
-  "Answers": [
-    {
-      "AnswerString": "Istiutisce l'Agenzia di Protezione Civile",
-      "IsCorrect": true,
-      "Explanation": "Il decreto legislativo n. 300 del 1999 ha istituito l'Agenzia come ente pubblico economico con funzioni operative e tecniche in materia di protezione civile"
-    },
-    {
-      "AnswerString": "Affida il coordinamento della protezione civile al Presidente del Consiglio",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Modifica gli assetti organizzativi della Presidenza del Consiglio",
-      "IsCorrect": false,
-      "Explanation": ""
-    },
-    {
-      "AnswerString": "Tutte le precedenti",
-      "IsCorrect": false,
-      "Explanation": ""
-    }
-  ]
-}]
+[
+  {
+    "_id": "1c2ed71d-d1b0-4f12-b0e6-54859f9158b2",
+    "QuestionString": "Quali sono le calamità che hanno colpito l'Italia e che hanno portato? alla creazione del Sistema di Protezione Civile?",
+    "Answers": [
+      {
+        "AnswerString": "Terremoti e alluvioni",
+        "IsCorrect": true,
+        "Explanation": "Le calamità che hanno portato alla creazione del Sistema di Protezione Civile sono state i terremoti e le alluvioni, che hanno causato gravi danni e vittime nel territorio italiano."
+      },
+      {
+        "AnswerString": "Incendi e smog",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Inondazioni e siccità",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Grandine e neve",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "479612f5-5b62-4750-89ad-01bda02269a8",
+    "QuestionString": "Quali sono le radici storiche dell'idea di protezione civile in Italia?",
+    "Answers": [
+      {
+        "AnswerString": "Ordini religiosi medievali",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Strutture laiche come le Misericordie",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "I Vigili del Fuoco",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Tutte le precedenti",
+        "IsCorrect": true,
+        "Explanation": "Le radici storiche dell'idea di protezione civile in Italia risalgono agli ordini religiosi medievali, alle strutture laiche come le Misericordie e ai Vigili del Fuoco, che si occupavano di assistere i bisognosi e prevenire o spegnere gli incendi."
+      }
+    ]
+  },
+  {
+    "_id": "1e34926e-9792-4a6f-83f3-6e5ae92810ae",
+    "QuestionString": "Quali erano le autorità preposte ai soccorsi prima dell'Unità d'Italia?",
+    "Answers": [
+      {
+        "AnswerString": "I commissari centrali",
+        "IsCorrect": true,
+        "Explanation": "Le autorità preposte ai soccorsi prima dell'Unità d'Italia erano i commissari centrali, nominati dal governo centrale per coordinare gli interventi nelle zone colpite da calamità naturali o belliche."
+      },
+      {
+        "AnswerString": "I sindaci delle città colpite",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Le organizzazioni solidaristiche",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Nessuna delle precedenti",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "f91357d4-6183-4a37-a050-4ea7f341d37b",
+    "QuestionString": "In quale regione italiana fu progettata la prima casa antisismica del mondo occidentale?",
+    "Answers": [
+      {
+        "AnswerString": "Lombardia",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Veneto",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Marche",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Mantova",
+        "IsCorrect": true,
+        "Explanation": "La prima casa antisismica del mondo occidentale fu progettata da Pirro Ligorio nel Ducato di Mantova, per resistere ai terremoti che avevano colpito la regione nel XVI secolo."
+      }
+    ]
+  },
+  {
+    "_id": "a7074a95-6f04-4067-a381-7f05972f33b6",
+    "QuestionString": "Cosa si intende per \"generosità pubblica\" nell'ambito dei soccorsi?",
+    "Answers": [
+      {
+        "AnswerString": "Il soccorso fornito dallo Stato",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Il soccorso fornito dalle organizzazioni solidaristiche",
+        "IsCorrect": true,
+        "Explanation": "Per \"generosità pubblica\" si intende il soccorso fornito dalle organizzazioni solidaristiche, come le Misericordie, la Croce Rossa, il Comitato Italiano per l'Assistenza ai Profughi e altre associazioni caritative o umanitarie."
+      },
+      {
+        "AnswerString": "Il soccorso fornito dalle forze dell'ordine",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Il soccorso fornito dai militari",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "5bb5de9e-a72f-422d-9099-562dd1dd7add",
+    "QuestionString": "Quali furono i primi soccorritori a intervenire durante l'alluvione di Roma del dicembre 1870?",
+    "Answers": [
+      {
+        "AnswerString": "Le organizzazioni solidaristiche",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Le forze dell'ordine",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Le truppe dell'esercito",
+        "IsCorrect": true,
+        "Explanation": "I primi soccorritori a intervenire durante l'alluvione di Roma del dicembre 1870 furono le truppe dell'esercito, che si occuparono di evacuare i cittadini dalle zone allagate e ripristinare la viabilità e i servizi essenziali."
+      },
+      {
+        "AnswerString": "Nessuna delle precedenti",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "d94dd999-a47d-41fd-8386-b5dd0a389f24",
+    "QuestionString": "Qual è il fondamento normativo per gli interventi urgenti adottati in caso di emergenza?",
+    "Answers": [
+      {
+        "AnswerString": "La Legge n. 2359 del 25 giugno 1865",
+        "IsCorrect": true,
+        "Explanation": "Il fondamento normativo per gli interventi urgenti adottati in caso di emergenza è la Legge n. 2359 del 25 giugno 1865, che stabilisce il potere straordinario del governo centrale di intervenire nelle situazioni di grave necessità pubblica o pericolo imminente."
+      },
+      {
+        "AnswerString": "Il Decreto Legislativo n. 99 del 2004",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "La Costituzione italiana",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Nessuna delle precedenti",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "b98c9c5f-2fdc-4ffb-8e87-6ebdcec1a234",
+    "QuestionString": "Chi è il responsabile dell'iter di gestione delle emergenze?",
+    "Answers": [
+      {
+        "AnswerString": "Il Presidente della Repubblica",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Il Presidente del Consiglio",
+        "IsCorrect": true,
+        "Explanation": "Il responsabile dell'iter di gestione delle emergenze è il Presidente del Consiglio, che coordina il Dipartimento della Protezione Civile e nomina eventualmente un Commissario delegato per l'emergenza."
+      },
+      {
+        "AnswerString": "Il Ministro dell'Interno",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Il Prefetto della città colpita",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "593ca6f0-8ba2-4d89-98b5-76177a9c4aa1",
+    "QuestionString": "Quando le emergenze vengono considerate nazionali?",
+    "Answers": [
+      {
+        "AnswerString": "Quando colpiscono obiettivi strategici per la viabilità e le strutture di pubblica utilità",
+        "IsCorrect": true,
+        "Explanation": "Le emergenze vengono considerate nazionali quando colpiscono obiettivi strategici per la viabilità e le strutture di pubblica utilità, come ponti, strade, ospedali e scuole."
+      },
+      {
+        "AnswerString": "Quando colpiscono più di una regione",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Quando colpiscono la capitale",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Nessuna delle precedenti",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "86447007-19ee-46cb-a7c6-bfd8824ce9fa",
+    "QuestionString": "Cosa hanno in comune le organizzazioni solidaristiche e di volontariato menzionate nella storia?",
+    "Answers": [
+      {
+        "AnswerString": "Sono nate tutte tra il 200 e il 300",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Hanno tutte contribuito a portare aiuto in occasione di grandi emergenze",
+        "IsCorrect": true,
+        "Explanation": "Le organizzazioni solidaristiche e di volontariato menzionate nella storia hanno tutte contribuito a portare aiuto in occasione di grandi emergenze come terremoti, alluvioni e epidemie. Alcune di queste organizzazioni sono la Croce Rossa, la Protezione Civile e i Vigili del Fuoco."
+      },
+      {
+        "AnswerString": "Sono tutte ordini religiosi medievali",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Sono tutte presenti nelle valli alpine",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "8cee3c0c-baae-40b7-93f2-835c8314cb5a",
+    "QuestionString": "In quale stato sono state introdotte le prime norme antisismiche?",
+    "Answers": [
+      {
+        "AnswerString": "Regno delle Due Sicilie",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Stato Pontificio",
+        "IsCorrect": true,
+        "Explanation": "Lo Stato Pontificio fu il primo a introdurre le prime norme antisismiche nel 1783, dopo il terremoto che colpì la Calabria e la Sicilia. Le norme stabilivano criteri di progettazione e costruzione per le nuove case e gli edifici pubblici."
+      },
+      {
+        "AnswerString": "Ducato di Mantova",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Regno di Sardegna",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "a9acaa11-2a06-4b7a-b61f-3da75ee955fe",
+    "QuestionString": "Qual è stato il primo paese al mondo occidentale a progettare una casa antisismica?",
+    "Answers": [
+      {
+        "AnswerString": "Italia",
+        "IsCorrect": true,
+        "Explanation": "L'Italia fu il primo paese al mondo occidentale a progettare una casa antisismica nel 1570, dopo il terremoto che devastò Ferrara. L'architetto Pirro Ligorio disegnò una casa con pareti rinforzate, solai leggeri e fondamenta solide."
+      },
+      {
+        "AnswerString": "Francia",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Spagna",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Germania",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "b43a3685-286e-4f60-ab54-bba9222ee05c",
+    "QuestionString": "Cosa non è compito prioritario dello Stato in caso di calamità?",
+    "Answers": [
+      {
+        "AnswerString": "Dare aiuto e soccorrere le popolazioni sinistrate",
+        "IsCorrect": true,
+        "Explanation": "Considerare gli interventi dei militari opere di beneficenza non è compito prioritario dello Stato in caso di calamità. Lo Stato deve invece garantire l'aiuto e il soccorso alle popolazioni sinistrate, prevenire le calamità e mobilitare l'esercito se necessario."
+      },
+      {
+        "AnswerString": "Prevenire le calamità",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Mobilitare l'esercito",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Considerare gli interventi dei militari opere di beneficenza",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "e5987fba-62b2-4cf9-b92c-6c7a88157916",
+    "QuestionString": "Durante quale calamità le truppe dell'esercito hanno offerto i primi soccorsi?",
+    "Answers": [
+      {
+        "AnswerString": "Terremoto in Calabria",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Alluvione di Roma del dicembre 1870",
+        "IsCorrect": true,
+        "Explanation": "Le truppe dell'esercito hanno offerto i primi soccorsi durante l'alluvione di Roma del dicembre 1870, che causò gravi danni alla città e alle sue infrastrutture. I soldati furono impiegati per riparare i ponti, sgomberare le strade e assistere i cittadini."
+      },
+      {
+        "AnswerString": "Terremoto della Val di Noto",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Terremoto di Ferrara del 1570",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "7d190d22-a625-4f13-9f00-9655c36dda0f",
+    "QuestionString": "Cosa si intende per sussidiarietà nella materia della protezione civile?",
+    "Answers": [
+      {
+        "AnswerString": "Il trasferimento di importanti competenze alle autonomie locali",
+        "IsCorrect": true,
+        "Explanation": "Il principio di sussidiarietà è stato recepito nell'ordinamento italiano con l'art. 118 della Costituzione, che prevede che lo Stato favorisca l'autonomia delle entità locali"
+      },
+      {
+        "AnswerString": "La predisposizione dei programmi di previsione e prevenzione dei rischi da parte delle Regioni",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "L'attuazione degli interventi urgenti da parte delle Province",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "La predisposizione dei piani comunali di emergenza da parte dei Comuni",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "84980963-0228-4895-ac63-6772a3209684",
+    "QuestionString": "Chi si occupa dell'indirizzo, della promozione e del coordinamento delle attività in materia di protezione civile?",
+    "Answers": [
+      {
+        "AnswerString": "Le Regioni",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Gli enti locali",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Lo Stato",
+        "IsCorrect": true,
+        "Explanation": "Lo Stato ha il compito di indirizzare, promuovere e coordinare le attività in materia di protezione civile, secondo il decreto legislativo n. 1 del 2018"
+      },
+      {
+        "AnswerString": "L'Agenzia di Protezione Civile",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "e6db9ebf-95d6-4b1c-8a89-0e280c1f7709",
+    "QuestionString": "Quali sono le funzioni affidate alle Regioni in materia di protezione civile?",
+    "Answers": [
+      {
+        "AnswerString": "La predisposizione dei programmi di previsione e prevenzione dei rischi",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "L'attuazione degli interventi urgenti",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "L'organizzazione e l'impiego del volontariato",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Tutte le precedenti",
+        "IsCorrect": true,
+        "Explanation": "Le Regioni hanno funzioni di predisposizione dei programmi di previsione e prevenzione dei rischi, di attuazione degli interventi urgenti e di organizzazione e impiego del volontariato, secondo il decreto legislativo n. 1 del 2018"
+      }
+    ]
+  },
+  {
+    "_id": "1304a198-70f2-4c94-bbca-9821e4d0e02b",
+    "QuestionString": "Chi attua a livello provinciale le attività di previsione e prevenzione dei rischi?",
+    "Answers": [
+      {
+        "AnswerString": "Le regioni",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Gli enti locali",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Le Province",
+        "IsCorrect": true,
+        "Explanation": "Le Province sono responsabili dell'attuazione a livello provinciale delle attività di previsione e prevenzione dei rischi, secondo il decreto legislativo n. 1 del 2018"
+      },
+      {
+        "AnswerString": "I Comuni",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "54b7bd34-ce38-43b1-87af-0a5b6cf13f9c",
+    "QuestionString": "Cosa prevede la riforma del Titolo V della Costituzione in materia di protezione civile?",
+    "Answers": [
+      {
+        "AnswerString": "Inserisce la protezione civile tra le materie a legislazione esclusiva",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Inserisce la protezione civile tra le materie a legislazione concorrente",
+        "IsCorrect": true,
+        "Explanation": "La riforma del Titolo V della Costituzione ha modificato l'art. 117 stabilendo che lo Stato ha legislazione esclusiva solo sulle norme generali sulla protezione civile e sul coordinamento delle attività in caso di calamità naturali o provocate dall'uomo"
+      },
+      {
+        "AnswerString": "Elimina la figura del Commissario di Governo",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Tutte le precedenti",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  },
+  {
+    "_id": "44139d32-1431-44ac-88c0-c5595bce7db6",
+    "QuestionString": "Cosa prevede il decreto legislativo n. 300 del 1999?",
+    "Answers": [
+      {
+        "AnswerString": "Istiutisce l'Agenzia di Protezione Civile",
+        "IsCorrect": true,
+        "Explanation": "Il decreto legislativo n. 300 del 1999 ha istituito l'Agenzia come ente pubblico economico con funzioni operative e tecniche in materia di protezione civile"
+      },
+      {
+        "AnswerString": "Affida il coordinamento della protezione civile al Presidente del Consiglio",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Modifica gli assetti organizzativi della Presidenza del Consiglio",
+        "IsCorrect": false,
+        "Explanation": ""
+      },
+      {
+        "AnswerString": "Tutte le precedenti",
+        "IsCorrect": false,
+        "Explanation": ""
+      }
+    ]
+  }
+]
