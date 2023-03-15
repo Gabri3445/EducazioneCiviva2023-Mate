@@ -34,6 +34,10 @@ async function putData(url: string = '', data = {}) {
     }); // parses JSON response into native JavaScript objects
 }
 
+function isInterface<T>(obj: any,): obj is T {
+    return typeof obj === 'object' && obj !== null
+}
+
 async function ping(): Promise<string> {
     let pingUrl = url + "Ping";
     let response = await fetch(pingUrl);
@@ -45,10 +49,6 @@ async function ping(): Promise<string> {
 
 interface CreateUserResponse {
     id: string
-}
-
-function isInterface<T>(obj: any,): obj is T {
-    return typeof obj === 'object' && obj !== null
 }
 
 async function createUser(username: string): Promise<string | CreateUserResponse> {
@@ -72,9 +72,7 @@ async function createUser(username: string): Promise<string | CreateUserResponse
 
 interface GetQuestionResponse {
     questionString: string,
-    answers: [
-        string
-    ]
+    answers: Array<string>
 }
 
 async function getQuestion(guid: string): Promise<string | GetQuestionResponse> {
@@ -128,12 +126,8 @@ async function sendAnswer(guid: string, answerIndex: number): Promise<string | S
 }
 
 interface GetLeaderBoardResponse {
-    usernames: [
-        string
-    ],
-    scores: [
-        number
-    ]
+    usernames: Array<string>,
+    scores: Array<number>
 }
 
 async function getLeaderboard(): Promise<string | GetLeaderBoardResponse> {

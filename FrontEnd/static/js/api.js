@@ -39,6 +39,9 @@ function putData(url = '', data = {}) {
         });
     });
 }
+function isInterface(obj) {
+    return typeof obj === 'object' && obj !== null;
+}
 function ping() {
     return __awaiter(this, void 0, void 0, function* () {
         let pingUrl = url + "Ping";

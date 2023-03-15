@@ -1,15 +1,49 @@
-const barillas = document.querySelectorAll(".answers")
-const form = document.getElementById("form")
+const answers = document.querySelectorAll(".answers");
+const form = document.getElementById("form");
+const questionElement = document.querySelector(".question") as HTMLParagraphElement;
 
-barillas.forEach(element => element.addEventListener("click", () => {
-    barillas.forEach(giglo => giglo.classList.remove("selected"))
+let user: User;
+
+class User {
+    guid: string;
+    currentQuestion: string;
+    answers: Array<string>;
+
+    constructor(guid: string, currentQuestion: string, answers: Array<string>) {
+        this.guid = guid;
+        this.currentQuestion = currentQuestion;
+        this.answers = answers;
+    }
+}
+
+answers.forEach(element => element.addEventListener("click", () => {
+    answers.forEach(giglo => giglo.classList.remove("selected"))
     element.classList.add("selected")
+    if (user.guid !== "") {
+        // Send the answer
+    }
 }))
 
 
-form!.addEventListener("submit", function (e :SubmitEvent) {
+form!.addEventListener("submit", async (e: SubmitEvent) => {
     e.preventDefault()
-    let parent = form!.parentNode as HTMLElement; // ! means value can't be null
-    parent.classList.add("hidden");
-    document.querySelector("body")!.classList.remove("darken") // same thing here
+    const usernameInput = document.getElementsByName("username")[0] as HTMLInputElement;
+    const username = usernameInput.value;
+    const createResponse = await createUser(username);
+    if (isInterface<CreateUserResponse>(createResponse)) {
+        let guid = createResponse.id;
+        const questionResponse = await getQuestion(guid);
+        if (isInterface<GetQuestionResponse>(questionResponse)) {
+            user = new User(guid, questionResponse.questionString, questionResponse.answers);
+            questionElement.innerHTML = questionResponse.questionString;
+        } else {
+            console.error(questionResponse)
+        }
+        const parent = form!.parentNode as HTMLElement; // ! means value can't be null
+        parent.classList.add("hidden");
+        document.querySelector("body")!.classList.remove("darken") // same thing here
+    } else {
+        console.error(createResponse)
+    }
 })
+
