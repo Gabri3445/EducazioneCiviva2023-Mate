@@ -1,5 +1,5 @@
-let barillas = document.querySelectorAll(".answers")
-let form: HTMLElement | null = document.getElementById("form")
+const barillas = document.querySelectorAll(".answers")
+const form = document.getElementById("form")
 
 barillas.forEach(element => element.addEventListener("click", () => {
     barillas.forEach(giglo => giglo.classList.remove("selected"))
@@ -9,7 +9,7 @@ barillas.forEach(element => element.addEventListener("click", () => {
 
 form!.addEventListener("submit", function (e) {
     e.preventDefault()
-    let parent = form?.parentNode as HTMLElement;
+    let parent = form!.parentNode as HTMLElement; // ! means value can't be null
     parent.classList.add("hidden");
-    document.querySelector("body")!.classList.remove("darken")
+    document.querySelector("body")!.classList.remove("darken") // same thing here
 })

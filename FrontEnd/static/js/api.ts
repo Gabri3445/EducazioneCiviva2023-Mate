@@ -34,7 +34,7 @@ async function putData(url: string = '', data = {}) {
     }); // parses JSON response into native JavaScript objects
 }
 
-async function ping() :Promise<string>{
+async function ping(): Promise<string> {
     let pingUrl = url + "Ping";
     let response = await fetch(pingUrl);
     if (response.status === 200) {
@@ -47,7 +47,7 @@ interface CreateUserResponse {
     id: string
 }
 
-async function createUser(username: string) : Promise<string | CreateUserResponse>  {
+async function createUser(username: string): Promise<string | CreateUserResponse> {
     let createUrl = url + "CreateUser"
     if (username === "") {
         return "Empty Username";
@@ -73,7 +73,8 @@ interface GetQuestionResponse {
         string
     ]
 }
-async function getQuestion(guid: string) : Promise<string | GetQuestionResponse> {
+
+async function getQuestion(guid: string): Promise<string | GetQuestionResponse> {
     if (guid === "") {
         return "Empty Guid";
     }
@@ -131,6 +132,7 @@ interface GetLeaderBoardResponse {
         number
     ]
 }
+
 async function getLeaderboard(): Promise<string | GetLeaderBoardResponse> {
     let leaderboardUrl = url + "GetLeaderboard";
     let response = await fetch(leaderboardUrl);
