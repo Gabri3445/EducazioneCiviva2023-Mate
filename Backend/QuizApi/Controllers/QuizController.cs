@@ -40,13 +40,11 @@ public class QuizController : ControllerBase
         if (createUserRequest.Username.Equals("")) return BadRequest();
         var questions = _questionCollection
             .AsQueryable()
-            .Where(x => true)
-            .OrderBy(x => Guid.NewGuid())
             .ToList();
-        foreach (var question in questions)
-        {
-            question.Answers = question.Answers.OrderBy(x => Guid.NewGuid()).ToList();
-        }
+        questions = questions
+            .OrderBy(x => Guid.NewGuid()).ToList();
+        foreach (var question in questions) question.Answers = question.Answers.OrderBy(x => Guid.NewGuid()).ToList();
+
         var user = new User(createUserRequest.Username, questions);
         _userCollection.InsertOne(user);
         return Ok(new CreateUserResponse(user.Id));
@@ -94,9 +92,9 @@ public class QuizController : ControllerBase
         var question = user.QuestionsToAnswer[user.NextQuestion];
 
         var isCorrect = question.Answers[sendAnswerRequest.AnswerIndex].IsCorrect;
-        
+
         var explanation = string.Empty;
-        
+
         if (isCorrect)
         {
             var filter = Builders<User>.Filter.Eq(x => x.Id, sendAnswerRequest.UserGuid);
@@ -104,7 +102,7 @@ public class QuizController : ControllerBase
             _userCollection.UpdateOne(filter, update);
             explanation = question.Answers[sendAnswerRequest.AnswerIndex].Explanation;
         }
-        
+
         return Ok(new SendAnswerResponse(isCorrect, explanation));
     }
 

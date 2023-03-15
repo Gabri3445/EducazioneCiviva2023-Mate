@@ -12,7 +12,7 @@ public class Question
     }
 
     [BsonId] public string Id { get; set; }
-    
+
     public string QuestionString { get; set; } // The question
 
     public List<Answer> Answers { get; set; } // The answers
