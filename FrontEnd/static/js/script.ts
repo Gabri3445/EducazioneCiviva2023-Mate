@@ -36,6 +36,7 @@ form!.addEventListener("submit", async (e: SubmitEvent) => {
         if (isInterface<GetQuestionResponse>(questionResponse)) {
             user = new User(guid, questionResponse.questionString, questionResponse.answers);
             questionElement.innerHTML = questionResponse.questionString;
+            //TODO set the answers, maybe do a function
         } else {
             console.error(questionResponse)
         }
