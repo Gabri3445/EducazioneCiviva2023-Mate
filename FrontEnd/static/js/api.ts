@@ -47,6 +47,10 @@ interface CreateUserResponse {
     id: string
 }
 
+function isInterface<T>(obj: any,): obj is T {
+    return typeof obj === 'object' && obj !== null
+}
+
 async function createUser(username: string): Promise<string | CreateUserResponse> {
     let createUrl = url + "CreateUser"
     if (username === "") {
