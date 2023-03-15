@@ -58,12 +58,13 @@ input[type=text] {
     min-width: 750px;
 }
 
-.left-arrow {
+.right-arrow {
     cursor: pointer;
 }
 
-.right-arrow {
-    cursor: pointer;
+#githubLogo {
+    width: 45px;
+    height: 45px;
 }
 
 .navMenu {
@@ -127,4 +128,8 @@ input[type=radio] {
 
 .complete-answer {
     margin-left: 8px;
+}
+
+.hidden-opacity {
+    color: rgba(0, 0, 0, 0);
 }

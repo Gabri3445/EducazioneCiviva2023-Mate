@@ -7,7 +7,7 @@ barillas.forEach(element => element.addEventListener("click", () => {
 }));
 form.addEventListener("submit", function (e) {
     e.preventDefault();
-    let parent = form.parentNode; // ! means value can't be null
+    let parent = form.parentNode;
     parent.classList.add("hidden");
     document.querySelector("body").classList.remove("darken");
 });

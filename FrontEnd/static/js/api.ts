@@ -66,7 +66,6 @@ async function createUser(username: string): Promise<string | CreateUserResponse
     return "";
 }
 
-
 interface GetQuestionResponse {
     questionString: string,
     answers: [

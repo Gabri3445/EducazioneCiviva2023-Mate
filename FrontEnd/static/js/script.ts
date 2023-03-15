@@ -7,7 +7,7 @@ barillas.forEach(element => element.addEventListener("click", () => {
 }))
 
 
-form!.addEventListener("submit", function (e) {
+form!.addEventListener("submit", function (e :SubmitEvent) {
     e.preventDefault()
     let parent = form!.parentNode as HTMLElement; // ! means value can't be null
     parent.classList.add("hidden");

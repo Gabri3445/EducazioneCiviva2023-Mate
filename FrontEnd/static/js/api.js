@@ -1,41 +1,16 @@
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) {
-        return value instanceof P ? value : new P(function (resolve) {
-            resolve(value);
-        });
-    }
-
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) {
-            try {
-                step(generator.next(value));
-            } catch (e) {
-                reject(e);
-            }
-        }
-
-        function rejected(value) {
-            try {
-                step(generator["throw"](value));
-            } catch (e) {
-                reject(e);
-            }
-        }
-
-        function step(result) {
-            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-        }
-
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
 let url = "http://localhost:5258/api/Quiz/";
-
-// let url = "http://gabri3445.ddns.net/api/Quiz/
 function postData(url = '', data = {}) {
     return __awaiter(this, void 0, void 0, function* () {
-        // Default options are marked with *
         return yield fetch(url, {
             method: 'POST',
             mode: 'cors',
@@ -43,17 +18,14 @@ function postData(url = '', data = {}) {
             credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
             }, redirect: 'follow',
             referrerPolicy: 'no-referrer',
-            body: JSON.stringify(data) // body data type must match "Content-Type" header
-        }); // parses JSON response into native JavaScript objects
+            body: JSON.stringify(data)
+        });
     });
 }
-
 function putData(url = '', data = {}) {
     return __awaiter(this, void 0, void 0, function* () {
-        // Default options are marked with *
         return yield fetch(url, {
             method: 'PUT',
             mode: 'cors',
@@ -61,14 +33,12 @@ function putData(url = '', data = {}) {
             credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
             }, redirect: 'follow',
             referrerPolicy: 'no-referrer',
-            body: JSON.stringify(data) // body data type must match "Content-Type" header
-        }); // parses JSON response into native JavaScript objects
+            body: JSON.stringify(data)
+        });
     });
 }
-
 function ping() {
     return __awaiter(this, void 0, void 0, function* () {
         let pingUrl = url + "Ping";
@@ -79,7 +49,6 @@ function ping() {
         return "Not Online";
     });
 }
-
 function createUser(username) {
     return __awaiter(this, void 0, void 0, function* () {
         let createUrl = url + "CreateUser";
@@ -100,7 +69,6 @@ function createUser(username) {
         return "";
     });
 }
-
 function getQuestion(guid) {
     return __awaiter(this, void 0, void 0, function* () {
         if (guid === "") {
@@ -121,7 +89,6 @@ function getQuestion(guid) {
         return "";
     });
 }
-
 function sendAnswer(guid, answerIndex) {
     return __awaiter(this, void 0, void 0, function* () {
         let sendUrl = url + "SendAnswer";
@@ -149,7 +116,6 @@ function sendAnswer(guid, answerIndex) {
         return "";
     });
 }
-
 function getLeaderboard() {
     return __awaiter(this, void 0, void 0, function* () {
         let leaderboardUrl = url + "GetLeaderboard";
