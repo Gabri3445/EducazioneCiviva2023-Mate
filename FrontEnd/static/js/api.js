@@ -1,71 +1,83 @@
-let url = "http://localhost:5258/api/Quiz/"
-
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+let url = "http://localhost:5258/api/Quiz/";
 // let url = "http://gabri3445.ddns.net/api/Quiz/
-
-async function postData(url = '', data = {}) {
-    // Default options are marked with *
-    return await fetch(url, {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'same-origin', // include, *same-origin, omit
-        headers: {
-            'Content-Type': 'application/json'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-        }, redirect: 'follow', // manual, *follow, error
-        referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify(data) // body data type must match "Content-Type" header
-    }); // parses JSON response into native JavaScript objects
+function postData(url = '', data = {}) {
+    return __awaiter(this, void 0, void 0, function* () {
+        // Default options are marked with *
+        return yield fetch(url, {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            }, redirect: 'follow',
+            referrerPolicy: 'no-referrer',
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
+        }); // parses JSON response into native JavaScript objects
+    });
 }
-
-async function putData(url = '', data = {}) {
-    // Default options are marked with *
-    return await fetch(url, {
-        method: 'PUT', // *GET, POST, PUT, DELETE, etc.
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'same-origin', // include, *same-origin, omit
-        headers: {
-            'Content-Type': 'application/json'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-        }, redirect: 'follow', // manual, *follow, error
-        referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify(data) // body data type must match "Content-Type" header
-    }); // parses JSON response into native JavaScript objects
+function putData(url = '', data = {}) {
+    return __awaiter(this, void 0, void 0, function* () {
+        // Default options are marked with *
+        return yield fetch(url, {
+            method: 'PUT',
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            }, redirect: 'follow',
+            referrerPolicy: 'no-referrer',
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
+        }); // parses JSON response into native JavaScript objects
+    });
 }
-
-async function ping() {
-    let pingUrl = url + "Ping";
-    let response = await fetch(pingUrl);
-    if (response.status === 200) {
-        return "Online";
-    }
-    return "Not Online";
+function ping() {
+    return __awaiter(this, void 0, void 0, function* () {
+        let pingUrl = url + "Ping";
+        let response = yield fetch(pingUrl);
+        if (response.status === 200) {
+            return "Online";
+        }
+        return "Not Online";
+    });
 }
-
 /*
 {
     id: "string"
 }
  */
-async function createUser(username) {
-    let createUrl = url + "CreateUser"
-    if (username === ""){
-        return "Empty Username";
-    }
-    let data = {
-        username: username
-    };
-    let response = await postData(createUrl, data);
-    let statusCode = response.status;
-    if (statusCode === 200) {
-        return response.json();
-    }
-    if (statusCode === 400) {
-        return "Empty username"
-    }
+function createUser(username) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let createUrl = url + "CreateUser";
+        if (username === "") {
+            return "Empty Username";
+        }
+        let data = {
+            username: username
+        };
+        let response = yield postData(createUrl, data);
+        let statusCode = response.status;
+        if (statusCode === 200) {
+            return response.json();
+        }
+        if (statusCode === 400) {
+            return "Empty username";
+        }
+    });
 }
-
 /*
 {
   questionString: "string",
@@ -74,55 +86,57 @@ async function createUser(username) {
   ]
 }
  */
-async function getQuestion(guid) {
-    if (guid === "") {
-        return "Empty Guid";
-    }
-    let questionUrl = url + "GetQuestion?userGuid=" + guid;
-    let response = await fetch(questionUrl);
-    let statusCode = response.status;
-    if (statusCode === 200) {
-        return response.json();
-    }
-    if (statusCode === 400) {
-        return "Invalid Guid";
-    }
-    if (statusCode === 404) {
-        return "User not found"
-    }
+function getQuestion(guid) {
+    return __awaiter(this, void 0, void 0, function* () {
+        if (guid === "") {
+            return "Empty Guid";
+        }
+        let questionUrl = url + "GetQuestion?userGuid=" + guid;
+        let response = yield fetch(questionUrl);
+        let statusCode = response.status;
+        if (statusCode === 200) {
+            return response.json();
+        }
+        if (statusCode === 400) {
+            return "Invalid Guid";
+        }
+        if (statusCode === 404) {
+            return "User not found";
+        }
+    });
 }
-
 /*
 {
   correctAnswer: bool,
   explanation: "string"
 }
  */
-async function sendAnswer(guid, answerIndex) {
-    let sendUrl = url + "SendAnswer";
-    if (guid === "") {
-        return "Empty Guid";
-    }
-    if (!Number.isInteger(answerIndex)) {
-        return "Answer Index is NaN"
-    }
-    let data = {
-        userGuid: guid,
-        answerIndex: answerIndex
-    }
-    let response = await putData(sendUrl, data);
-    let statusCode = response.status;
-    if (statusCode === 200) {
-        return response.json();
-    }
-    if (statusCode === 400) {
-        return "Invalid Guid";
-    }
-    if (statusCode === 404) {
-        return "User not found"
-    }
+function sendAnswer(guid, answerIndex) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let sendUrl = url + "SendAnswer";
+        if (guid === "") {
+            return "Empty Guid";
+        }
+        if (!Number.isInteger(answerIndex)) {
+            return "Answer Index is NaN";
+        }
+        let data = {
+            userGuid: guid,
+            answerIndex: answerIndex
+        };
+        let response = yield putData(sendUrl, data);
+        let statusCode = response.status;
+        if (statusCode === 200) {
+            return response.json();
+        }
+        if (statusCode === 400) {
+            return "Invalid Guid";
+        }
+        if (statusCode === 404) {
+            return "User not found";
+        }
+    });
 }
-
 /*
 {
   usernames: [ // Already sorted
@@ -133,12 +147,14 @@ async function sendAnswer(guid, answerIndex) {
   ]
 }
  */
-async function getLeaderboard() {
-    let leaderboardUrl = url + "GetLeaderboard";
-    let response = await fetch(leaderboardUrl);
-    let statusCode = response.status;
-    if (statusCode !== 200) {
-        return "Error";
-    }
-    return response.json();
+function getLeaderboard() {
+    return __awaiter(this, void 0, void 0, function* () {
+        let leaderboardUrl = url + "GetLeaderboard";
+        let response = yield fetch(leaderboardUrl);
+        let statusCode = response.status;
+        if (statusCode !== 200) {
+            return "Error";
+        }
+        return response.json();
+    });
 }
