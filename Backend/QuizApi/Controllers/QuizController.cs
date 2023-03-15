@@ -47,6 +47,7 @@ public class QuizController : ControllerBase
 
         var user = new User(createUserRequest.Username, questions);
         _userCollection.InsertOne(user);
+        _logger.Log(LogLevel.Information, "{UserUsername} created with GUID: {UserId}", user.Username, user.Id);
         return Ok(new CreateUserResponse(user.Id));
     }
 
@@ -72,6 +73,7 @@ public class QuizController : ControllerBase
         var filter = Builders<User>.Filter.Eq(x => x.Id, userGuid);
         var update = Builders<User>.Update.Inc(x => x.NextQuestion, 1);
         _userCollection.UpdateOne(filter, update);
+        _logger.Log(LogLevel.Information, "{UserId} requested the question: {QuestionQuestionString}", user.Id, question.QuestionString);
         return Ok(new GetQuestionResponse(question.QuestionString, answerList));
     }
 
@@ -103,6 +105,8 @@ public class QuizController : ControllerBase
             explanation = question.Answers[sendAnswerRequest.AnswerIndex].Explanation;
         }
 
+        _logger.Log(LogLevel.Information, "{UserId} sent an answer with index: {AnswerIndex}. Correct: {IsCorrect}. Explanation: {Explanation}", user.Id, sendAnswerRequest.AnswerIndex, isCorrect, explanation);
+        
         return Ok(new SendAnswerResponse(isCorrect, explanation));
     }
 
@@ -117,6 +121,7 @@ public class QuizController : ControllerBase
             .ToList();
         var usernames = leaderboard.Select(x => x.Username).ToList();
         var scores = leaderboard.Select(x => x.Score).ToList();
+        _logger.Log(LogLevel.Information, "Requested leaderboard");
         return Ok(new GetLeaderBoardResponse(usernames, scores));
     }
 }
