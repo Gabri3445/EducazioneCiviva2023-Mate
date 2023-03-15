@@ -34,7 +34,7 @@ async function putData(url: string = '', data = {}) {
     }); // parses JSON response into native JavaScript objects
 }
 
-async function ping() {
+async function ping() :Promise<string>{
     let pingUrl = url + "Ping";
     let response = await fetch(pingUrl);
     if (response.status === 200) {
@@ -43,12 +43,11 @@ async function ping() {
     return "Not Online";
 }
 
-/*
-{
-    id: "string"
+interface CreateUserResponse {
+    id: string
 }
- */
-async function createUser(username: string) {
+
+async function createUser(username: string) : Promise<string | CreateUserResponse>  {
     let createUrl = url + "CreateUser"
     if (username === "") {
         return "Empty Username";
@@ -64,17 +63,17 @@ async function createUser(username: string) {
     if (statusCode === 400) {
         return "Empty username"
     }
+    return "";
 }
 
-/*
-{
-  questionString: "string",
-  answers: [
-    "string"
-  ]
+
+interface GetQuestionResponse {
+    questionString: string,
+    answers: [
+        string
+    ]
 }
- */
-async function getQuestion(guid: string) {
+async function getQuestion(guid: string) : Promise<string | GetQuestionResponse> {
     if (guid === "") {
         return "Empty Guid";
     }
@@ -90,15 +89,15 @@ async function getQuestion(guid: string) {
     if (statusCode === 404) {
         return "User not found"
     }
+    return "";
 }
 
-/*
-{
-  correctAnswer: bool,
-  explanation: "string"
+interface SendAnswerResponse {
+    correctAnswer: boolean,
+    explanation: string
 }
- */
-async function sendAnswer(guid: string, answerIndex: number) {
+
+async function sendAnswer(guid: string, answerIndex: number): Promise<string | SendAnswerResponse> {
     let sendUrl = url + "SendAnswer";
     if (guid === "") {
         return "Empty Guid";
@@ -121,19 +120,18 @@ async function sendAnswer(guid: string, answerIndex: number) {
     if (statusCode === 404) {
         return "User not found"
     }
+    return ""
 }
 
-/*
-{
-  usernames: [ // Already sorted
-    "string"
-  ],
-  scores: [ // Already sorted
-    0
-  ]
+interface GetLeaderBoardResponse {
+    usernames: [
+        string
+    ],
+    scores: [
+        number
+    ]
 }
- */
-async function getLeaderboard() {
+async function getLeaderboard(): Promise<string | GetLeaderBoardResponse> {
     let leaderboardUrl = url + "GetLeaderboard";
     let response = await fetch(leaderboardUrl);
     let statusCode = response.status;

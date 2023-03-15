@@ -54,11 +54,6 @@ function ping() {
         return "Not Online";
     });
 }
-/*
-{
-    id: "string"
-}
- */
 function createUser(username) {
     return __awaiter(this, void 0, void 0, function* () {
         let createUrl = url + "CreateUser";
@@ -76,16 +71,9 @@ function createUser(username) {
         if (statusCode === 400) {
             return "Empty username";
         }
+        return "";
     });
 }
-/*
-{
-  questionString: "string",
-  answers: [
-    "string"
-  ]
-}
- */
 function getQuestion(guid) {
     return __awaiter(this, void 0, void 0, function* () {
         if (guid === "") {
@@ -103,14 +91,9 @@ function getQuestion(guid) {
         if (statusCode === 404) {
             return "User not found";
         }
+        return "";
     });
 }
-/*
-{
-  correctAnswer: bool,
-  explanation: "string"
-}
- */
 function sendAnswer(guid, answerIndex) {
     return __awaiter(this, void 0, void 0, function* () {
         let sendUrl = url + "SendAnswer";
@@ -135,18 +118,9 @@ function sendAnswer(guid, answerIndex) {
         if (statusCode === 404) {
             return "User not found";
         }
+        return "";
     });
 }
-/*
-{
-  usernames: [ // Already sorted
-    "string"
-  ],
-  scores: [ // Already sorted
-    0
-  ]
-}
- */
 function getLeaderboard() {
     return __awaiter(this, void 0, void 0, function* () {
         let leaderboardUrl = url + "GetLeaderboard";
