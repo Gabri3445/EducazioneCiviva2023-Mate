@@ -25,6 +25,59 @@ body.darken {
     text-align: center;
 }
 
+#leaderboard {
+    outline-width: 8px;
+    outline-style: dashed;
+    border-color: #95600e;
+    outline-offset: 11px;
+    width: 700px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: red;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    background: no-repeat url("../static/images/leaderboard.png");
+    background-size: 100% 100%;
+}
+
+.whiteBG {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background: rgba(255,255,255, .5);
+}
+
+.navigation-tool {
+    display: flex;
+    justify-content: space-between
+}
+
+.confirmBox {
+    background: red;
+    width: 120px;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #000000;
+    border-radius: 20px 20px 0px 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.confirmBox a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .hidden {
     display: none !important;
 }
@@ -62,9 +115,16 @@ input[type=text] {
     cursor: pointer;
 }
 
-#githubLogo {
-    width: 45px;
-    height: 45px;
+.answer-container {
+    background: rgb(56,56,56);
+    width: 100%;
+    height: 100px;
+    color: white;
+    font-size: 20px;
+    border-bottom-width: 7px;
+    border-bottom-style: solid;
+    border-bottom-color: #FCFF00;
+    border-radius: 0px 0px 30px 30px;
 }
 
 .navMenu {
@@ -83,20 +143,24 @@ input[type=text] {
 #quiz {
     font-size: 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: column;
     border-radius: 25px;
     margin: auto;
     width: 95%;
     height: 90%;
-    background: linear-gradient(90deg, rgba(13, 201, 17, .8) 0%, rgba(240, 240, 240, .3) 50%, rgba(255, 0, 0, .8) 100%);
+    background: linear-gradient(90deg, rgba(13, 201, 17, .9) 0%, rgba(240, 240, 240, .5) 50%, rgba(255, 0, 0, .9) 100%);
     border: 7px solid yellow;
 }
 
 .question {
     margin-left: 8px;
+    margin-right: 8px;
     font-size: 30px;
     font-weight: bold;
+    border-bottom-width: 7px;
+    border-bottom-style: solid;
+    border-bottom-color: #FCFF00;
 }
 
 .multiple-answers .answers {
@@ -108,14 +172,18 @@ input[type=text] {
 .answers.selected {
     text-shadow: 2px 0 #faff00, -2px 0 #faff00, 0 2px #faff00, 0 -2px #faff00,
     1px 1px #faff00, -1px -1px #faff00, 1px -1px #faff00, -1px 1px #faff00;
-    font-size: 20px;
+    font-size: 45px;
 }
 
 .answers {
+    font-weight: 900;
+    font-size: 40px;
+    height: 70px;
     transition: all .2s;
 }
 
 .multiple-answers {
+    margin-right: 8px;
     margin-left: 8px;
 }
 

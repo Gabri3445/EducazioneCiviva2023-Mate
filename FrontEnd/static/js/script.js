@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const answers = document.querySelectorAll(".answers");
 const form = document.getElementById("form");
+const whiteBG = document.querySelector(".whiteBG");
 const questionElement = document.querySelector(".question");
 let user;
 class User {
@@ -42,6 +43,7 @@ form.addEventListener("submit", (e) => __awaiter(void 0, void 0, void 0, functio
         }
         const parent = form.parentNode;
         parent.classList.add("hidden");
+        whiteBG.classList.add("hidden");
         document.querySelector("body").classList.remove("darken");
     }
     else {

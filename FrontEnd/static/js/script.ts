@@ -1,5 +1,6 @@
 const answers = document.querySelectorAll(".answers");
 const form = document.getElementById("form");
+const whiteBG = document.querySelector(".whiteBG");
 const questionElement = document.querySelector(".question") as HTMLParagraphElement;
 
 let user: User;
@@ -42,6 +43,7 @@ form!.addEventListener("submit", async (e: SubmitEvent) => {
         }
         const parent = form!.parentNode as HTMLElement; // ! means value can't be null
         parent.classList.add("hidden");
+        whiteBG!.classList.add("hidden");
         document.querySelector("body")!.classList.remove("darken") // same thing here
     } else {
         console.error(createResponse)

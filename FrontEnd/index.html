@@ -8,22 +8,36 @@
     <link href="./style/style.css" rel="stylesheet">
 </head>
 <body class="darken">
-<div class="registration">
-    <form id="form">
-        <label for="username">Username</label>
-        <input id="username" name="username" placeholder="Inserisci un username" required type="text">
-        <input class="submit" type="submit">
-    </form>
-    <a href="https://github.com/Gabri3445/EducazioneCiviva2023-Mate"><img alt="Github Logo"
-                                                                          src="./static/images/github-mark.svg"></a>
-</div>
+
+    <!--<div class="whiteBG">
+        <div id="leaderboard">
+            <p>LEADERBOARD</p>
+        </div>
+    </div>-->
+
+    <div class="whiteBG">
+        <div class="registration">
+            <form id="form">
+                <label for="username">Username</label>
+                <input id="username" name="username" placeholder="Inserisci un username" required type="text">
+                <input class="submit" type="submit">
+            </form>
+            <a href="https://github.com/Gabri3445/EducazioneCiviva2023-Mate"><img alt="Github Logo"
+                                                                                  src="./static/images/github-mark.svg"></a>
+        </div>
+    </div>
+
 <div class="container">
-    <div>
-        <a id="githubLogo" href="https://github.com/Gabri3445/EducazioneCiviva2023-Mate"><img alt="Github Logo"
-                                                                              src="./static/images/github-mark.svg"></a>
+    <div id="githubLogo">
+        <a href="https://github.com/Gabri3445/EducazioneCiviva2023-Mate"><img alt="Github Logo" src="./static/images/github-mark.svg" width="45px" height="45px"></a>
     </div>
     <div class="navMenu">
-        <h1>QUIZ SULLA PROTEZIONE CIVILE</h1>
+        <div class="navigation-tool">
+            <h1>QUIZ SULLA PROTEZIONE CIVILE</h1>
+            <div class="confirmBox">
+                <a href="#"><p>CONFERMA</p></a>
+            </div>
+        </div>
         <div id="quiz-content">
             <div id="quiz">
                 <p class="question">Cosa accade alle competenze dello Stato in materia di protezione civile, con la
@@ -31,33 +45,26 @@
 
                 <div class="multiple-answers">
                     <label class="answers">
-                        <input name="answer" type="radio"/>-Le competenze dello Stato in materia di protezione civile
-                        vengono abolite da parte del presidente del Consiglio e viene ricondotta invece la noenata
-                        Agenzia di Protezione Civile e il Dipartimento della Protezione Civile viene ripristinato.
+                        <input name="answer" type="radio"/>a) Le Regioni
                     </label>
 
                     <label class="answers">
-                        <input name="answer" type="radio"/>-Le competenze dello Stato in materia di protezione civile
-                        assieme alla neonata Agenzia di Protezione Civile vengono abolite e il Dipartimento della
-                        Protezione Civile viene ripristinato.
+                        <input name="answer" type="radio"/>b) Gli enti locali
                     </label>
 
                     <label class="answers">
-                        <input name="answer" type="radio"/>-Le competenze dello Stato in materia di protezione civile
-                        vengono ricondotte da parte del presidente del Consiglio e viene abolita invece la noenata
-                        Agenzia di Protezione Civile, inoltre il Dipartimento della Protezione Civile viene
-                        ripristinato.
+                        <input name="answer" type="radio"/>c) Le Province
                     </label>
 
                     <label class="answers">
-                        <input name="answer" type="radio"/>-Le competenze dello Stato in materia di protezione civile
-                        assieme alla neonata Agenzia di Protezione Civile vengono ricondotte, inoltre il Dipartimento
-                        della Protezione Civile viene ripristinato.
+                        <input name="answer" type="radio"/>d) I Comuni
                     </label>
                 </div>
             </div>
         </div>
-        <p class="complete-answer">barilla ipsum punto come bla bla bla</p>
+        <div class="answer-container">
+            <p class="complete-answer">barilla ipsum punto come bla bla bla</p>
+        </div>
     </div>
     <div class="right-arrow">
         <svg class="bi bi-arrow-right-circle-fill" fill="currentColor" height="45" viewBox="0 0 16 16"

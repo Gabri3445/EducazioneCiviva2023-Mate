@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-let url = "http://localhost:5258/api/Quiz/";
+let url = "http://gabri3445.ddns.net/api/Quiz/";
 function postData(url = '', data = {}) {
     return __awaiter(this, void 0, void 0, function* () {
         return yield fetch(url, {
