@@ -103,14 +103,16 @@ public class QuizController : ControllerBase
 
         for (var i = 0; i < question.Answers.Count; i++)
             if (question.Answers[i].IsCorrect)
+            {
+                explanation = question.Answers[sendAnswerRequest.AnswerIndex].Explanation;
                 index = i;
-
+            }
+        
         if (isCorrect)
         {
             var filter = Builders<User>.Filter.Eq(x => x.Id, sendAnswerRequest.UserGuid);
             var update = Builders<User>.Update.Inc(x => x.Score, 1);
             _userCollection.UpdateOne(filter, update);
-            explanation = question.Answers[sendAnswerRequest.AnswerIndex].Explanation;
         }
 
         _logger.Log(LogLevel.Information,
