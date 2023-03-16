@@ -1,7 +1,11 @@
 const answers = document.querySelectorAll(".answers") as unknown as Array<HTMLLabelElement>;
 const form = document.getElementById("form");
 const whiteBG = document.querySelector(".whiteBG");
-const submitBTN = document.querySelector(".submit");
+const explanationElement = document.querySelector(".complete-answer") as HTMLParagraphElement;
+const confirmElement = document.querySelector(".confirmBox") as HTMLDivElement;
+const questionElement = document.querySelector(".question") as HTMLParagraphElement;
+const nextQuestionArrow = document.querySelector(".right-arrow");
+
 let limit = true;
 const letters: Array<string> = [
     "A) ",
@@ -9,39 +13,39 @@ const letters: Array<string> = [
     "C) ",
     "D) "
 ]
-const confirmElement = document.querySelector(".confirmBox") as HTMLDivElement;
-const questionElement = document.querySelector(".question") as HTMLParagraphElement;
+
 
 let user: User;
 
 class User {
     guid: string;
+    username: string;
     currentQuestion: string;
     answers: Array<string>;
     selectedIndex: number = -1;
     hasAnswered: boolean = false;
 
-    constructor(guid: string, currentQuestion: string, answers: Array<string>) {
+    constructor(guid: string, username: string, currentQuestion: string, answers: Array<string>) {
         this.guid = guid;
+        this.username = username;
         this.currentQuestion = currentQuestion;
         this.answers = answers;
     }
 }
 
-confirmElement.addEventListener("click", async () => {
-    if (user.selectedIndex !== -1) {
-        let answerResponse = await sendAnswer(user.guid, user.selectedIndex);
-        if (isInterface<SendAnswerResponse>(answerResponse)) {
-            user.hasAnswered = true;
-            if (answerResponse.correctAnswer) {
-                // TODO set to green
-            } else {
-                // TODO set to red
-            }
-            // TODO set the explanation
-        }
-        user.selectedIndex = -1;
+form!.addEventListener("submit", async (e: SubmitEvent) => {
+    e.preventDefault()
+    if (limit) {
+        limit = false;
+        const usernameInput = document.getElementsByName("username")[0] as HTMLInputElement;
+        const username = usernameInput.value;
+        await getNewQuestion(username);
+        const parent = form!.parentNode as HTMLElement; // ! means value can't be null
+        parent.classList.add("hidden");
+        whiteBG!.classList.add("hidden");
+        document.querySelector("body")!.classList.remove("darken") // same thing here
     }
+
 })
 
 answers.forEach(element => element.addEventListener("click", (e) => {
@@ -54,33 +58,51 @@ answers.forEach(element => element.addEventListener("click", (e) => {
 }))
 
 
-form!.addEventListener("submit", async (e: SubmitEvent) => {
-    e.preventDefault()
-    if (limit) {
-        limit = false;
-        const usernameInput = document.getElementsByName("username")[0] as HTMLInputElement;
-        const username = usernameInput.value;
-        const createResponse = await createUser(username);
-        if (isInterface<CreateUserResponse>(createResponse)) {
-            let guid = createResponse.id;
-            const questionResponse = await getQuestion(guid);
-            if (isInterface<GetQuestionResponse>(questionResponse)) {
-                user = new User(guid, questionResponse.questionString, questionResponse.answers);
-                for (let i = 0; i < user.answers.length; i++) {
-                    answers[i].innerHTML = letters[i] + user.answers[i];
+
+confirmElement.addEventListener("click", async () => {
+    if (user.selectedIndex !== -1) {
+        if (!user.hasAnswered) {
+            user.hasAnswered = true;
+            let answerResponse = await sendAnswer(user.guid, user.selectedIndex);
+            if (isInterface<SendAnswerResponse>(answerResponse)) {
+                if (answerResponse.correctAnswer) {
+                    explanationElement.innerHTML = answerResponse.explanation;
+                    // TODO set to green
+                } else {
+                    // TODO set to red
                 }
-                questionElement.innerHTML = questionResponse.questionString;
-                //TODO set the answers, maybe do a function
-            } else {
-                console.error(questionResponse)
             }
-            const parent = form!.parentNode as HTMLElement; // ! means value can't be null
-            parent.classList.add("hidden");
-            whiteBG!.classList.add("hidden");
-            document.querySelector("body")!.classList.remove("darken") // same thing here
         }
-
+        user.selectedIndex = -1;
     }
-
 })
 
+nextQuestionArrow!.addEventListener("click", async () => {
+    if (user.hasAnswered && limit) {
+        limit = false;
+        // Reset user
+        user.currentQuestion = "";
+        user.answers = new Array<string>;
+        user.selectedIndex = -1;
+        user.hasAnswered = false
+        // Get new question and answers
+        await getNewQuestion(user.username);
+    }
+})
+
+async function getNewQuestion(username: string) {
+    const createResponse = await createUser(username);
+    if (isInterface<CreateUserResponse>(createResponse)) {
+        let guid = createResponse.id;
+        const questionResponse = await getQuestion(guid);
+        if (isInterface<GetQuestionResponse>(questionResponse)) {
+            user = new User(guid, username, questionResponse.questionString, questionResponse.answers);
+            for (let i = 0; i < user.answers.length; i++) {
+                answers[i].innerHTML = letters[i] + user.answers[i];
+            }
+            questionElement.innerHTML = questionResponse.questionString;
+        } else {
+            console.error(questionResponse)
+        }
+    }
+}
