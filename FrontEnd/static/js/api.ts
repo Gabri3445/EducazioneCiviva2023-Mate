@@ -96,7 +96,8 @@ async function getQuestion(guid: string): Promise<string | GetQuestionResponse> 
 
 interface SendAnswerResponse {
     correctAnswer: boolean,
-    explanation: string
+    explanation: string,
+    correctAnswerIndex: number
 }
 
 async function sendAnswer(guid: string, answerIndex: number): Promise<string | SendAnswerResponse> {
