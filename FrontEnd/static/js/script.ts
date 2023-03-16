@@ -78,8 +78,7 @@ confirmElement.addEventListener("click", async () => {
 })
 
 nextQuestionArrow!.addEventListener("click", async () => {
-    if (user.hasAnswered && limit) {
-        limit = false;
+    if (user.hasAnswered) {
         // Reset user
         user.currentQuestion = "";
         user.answers = new Array<string>;
