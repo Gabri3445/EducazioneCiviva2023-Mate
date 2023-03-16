@@ -11,6 +11,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const answers = document.querySelectorAll(".answers");
 const form = document.getElementById("form");
 const whiteBG = document.querySelector(".whiteBG");
+const submitBTN = document.querySelector(".submit");
+let limit = true;
+const letters = [
+    "A) ",
+    "B) ",
+    "C) ",
+    "D) "
+];
+const confirmElement = document.querySelector(".confirmBox");
 const questionElement = document.querySelector(".question");
 let user;
 class User {
@@ -28,25 +37,28 @@ answers.forEach(element => element.addEventListener("click", () => {
 }));
 form.addEventListener("submit", (e) => __awaiter(void 0, void 0, void 0, function* () {
     e.preventDefault();
-    const usernameInput = document.getElementsByName("username")[0];
-    const username = usernameInput.value;
-    const createResponse = yield createUser(username);
-    if (isInterface(createResponse)) {
-        let guid = createResponse.id;
-        const questionResponse = yield getQuestion(guid);
-        if (isInterface(questionResponse)) {
-            user = new User(guid, questionResponse.questionString, questionResponse.answers);
-            questionElement.innerHTML = questionResponse.questionString;
+    if (limit) {
+        limit = false;
+        const usernameInput = document.getElementsByName("username")[0];
+        const username = usernameInput.value;
+        const createResponse = yield createUser(username);
+        if (isInterface(createResponse)) {
+            let guid = createResponse.id;
+            const questionResponse = yield getQuestion(guid);
+            if (isInterface(questionResponse)) {
+                user = new User(guid, questionResponse.questionString, questionResponse.answers);
+                for (let i = 0; i < user.answers.length; i++) {
+                    answers[i].innerHTML = letters[i] + user.answers[i];
+                }
+                questionElement.innerHTML = questionResponse.questionString;
+            }
+            else {
+                console.error(questionResponse);
+            }
+            const parent = form.parentNode;
+            parent.classList.add("hidden");
+            whiteBG.classList.add("hidden");
+            document.querySelector("body").classList.remove("darken");
         }
-        else {
-            console.error(questionResponse);
-        }
-        const parent = form.parentNode;
-        parent.classList.add("hidden");
-        whiteBG.classList.add("hidden");
-        document.querySelector("body").classList.remove("darken");
-    }
-    else {
-        console.error(createResponse);
     }
 }));

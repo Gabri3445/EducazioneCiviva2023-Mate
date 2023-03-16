@@ -104,9 +104,6 @@ async function sendAnswer(guid: string, answerIndex: number): Promise<string | S
     if (guid === "") {
         return "Empty Guid";
     }
-    if (!Number.isInteger(answerIndex)) {
-        return "Answer Index is NaN"
-    }
     let data = {
         userGuid: guid,
         answerIndex: answerIndex

@@ -98,9 +98,6 @@ function sendAnswer(guid, answerIndex) {
         if (guid === "") {
             return "Empty Guid";
         }
-        if (!Number.isInteger(answerIndex)) {
-            return "Answer Index is NaN";
-        }
         let data = {
             userGuid: guid,
             answerIndex: answerIndex
