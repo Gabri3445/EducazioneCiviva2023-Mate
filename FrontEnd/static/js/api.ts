@@ -1,6 +1,6 @@
 //let url = "http://localhost:5258/api/Quiz/"
 
-let url = "http://gabri3445.ddns.net/api/Quiz/"
+const url = "http://gabri3445.ddns.net/api/Quiz/"
 
 async function postData(url: string = '', data = {}) {
     // Default options are marked with *
