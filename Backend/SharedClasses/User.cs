@@ -12,11 +12,8 @@ public class User
         Username = username;
         QuestionsToAnswer = questionsToAnswer;
         Score = 0;
-        NextQuestion = 0;
-        Questions = new List<Question>();
+        NextQuestion = -1;
     }
-
-    public List<Question> Questions { get; set; }
 
     public int Score { get; set; }
 
