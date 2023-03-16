@@ -104,7 +104,7 @@ public class QuizController : ControllerBase
         for (var i = 0; i < question.Answers.Count; i++)
             if (question.Answers[i].IsCorrect)
             {
-                explanation = question.Answers[sendAnswerRequest.AnswerIndex].Explanation;
+                explanation = question.Answers[i].Explanation;
                 index = i;
             }
         
