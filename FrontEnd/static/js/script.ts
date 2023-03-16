@@ -85,6 +85,7 @@ nextQuestionArrow!.addEventListener("click", async () => {
         user.selectedIndex = -1;
         user.hasAnswered = false
         // Get new question and answers
+        explanationElement.innerHTML = "";
         await getNewQuestion(user.username);
     }
 })

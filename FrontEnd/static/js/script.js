@@ -71,8 +71,7 @@ confirmElement.addEventListener("click", () => __awaiter(void 0, void 0, void 0,
     }
 }));
 nextQuestionArrow.addEventListener("click", () => __awaiter(void 0, void 0, void 0, function* () {
-    if (user.hasAnswered && limit) {
-        limit = false;
+    if (user.hasAnswered) {
         user.currentQuestion = "";
         user.answers = new Array;
         user.selectedIndex = -1;
