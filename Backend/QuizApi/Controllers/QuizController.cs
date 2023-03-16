@@ -65,15 +65,17 @@ public class QuizController : ControllerBase
 
         if (user == null) return NotFound();
 
-        var question = user.QuestionsToAnswer[user.NextQuestion];
         user.NextQuestion++;
+
+        var question = user.QuestionsToAnswer[user.NextQuestion];
 
         var answerList = question.Answers.Select(answer => answer.AnswerString).ToList();
 
         var filter = Builders<User>.Filter.Eq(x => x.Id, userGuid);
         var update = Builders<User>.Update.Inc(x => x.NextQuestion, 1);
         _userCollection.UpdateOne(filter, update);
-        _logger.Log(LogLevel.Information, "{UserId} requested the question: {QuestionQuestionString}", user.Id, question.QuestionString);
+        _logger.Log(LogLevel.Information, "{UserId} requested the question: {QuestionQuestionString}", user.Id,
+            question.QuestionString);
         return Ok(new GetQuestionResponse(question.QuestionString, answerList));
     }
 
@@ -105,8 +107,10 @@ public class QuizController : ControllerBase
             explanation = question.Answers[sendAnswerRequest.AnswerIndex].Explanation;
         }
 
-        _logger.Log(LogLevel.Information, "{UserId} sent an answer with index: {AnswerIndex}. Correct: {IsCorrect}. Explanation: {Explanation}", user.Id, sendAnswerRequest.AnswerIndex, isCorrect, explanation);
-        
+        _logger.Log(LogLevel.Information,
+            "{UserId} sent an answer with index: {AnswerIndex}. Correct: {IsCorrect}. Explanation: {Explanation}",
+            user.Id, sendAnswerRequest.AnswerIndex, isCorrect, explanation);
+
         return Ok(new SendAnswerResponse(isCorrect, explanation));
     }
 
