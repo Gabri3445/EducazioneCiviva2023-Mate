@@ -4,6 +4,6 @@
     "./static/js/*"
   ],
   "compilerOptions": {
-    "removeComments": true,
+    "removeComments": true
   }
 }
