@@ -19,6 +19,7 @@ class User {
     currentQuestion: string;
     answers: Array<string>;
     selectedIndex: number = -1;
+    hasAnswered: boolean = false;
 
     constructor(guid: string, currentQuestion: string, answers: Array<string>) {
         this.guid = guid;
@@ -27,12 +28,20 @@ class User {
     }
 }
 
-confirmElement.addEventListener("click", () => {
+confirmElement.addEventListener("click", async () => {
     if (user.selectedIndex !== -1) {
-
+        let answerResponse = await sendAnswer(user.guid, user.selectedIndex);
+        if (isInterface<SendAnswerResponse>(answerResponse)) {
+            user.hasAnswered = true;
+            if (answerResponse.correctAnswer) {
+                // TODO set to green
+            } else {
+                // TODO set to red
+            }
+            // TODO set the explanation
+        }
         user.selectedIndex = -1;
     }
-
 })
 
 answers.forEach(element => element.addEventListener("click", (e) => {
