@@ -61,7 +61,6 @@ answers.forEach(element => element.addEventListener("click", (e) => {
 }))
 
 
-
 confirmElement.addEventListener("click", async () => {
     if (user.selectedIndex !== -1) {
         if (!user.hasAnswered) {
@@ -73,14 +72,39 @@ confirmElement.addEventListener("click", async () => {
                     questionContainer.classList.add("correct");
                     answerContainer.classList.add("correct");
 
-                    answers.forEach(element => element.classList.add("wrong-answer"))
-                    answers.forEach(element => element.classList.remove("selected"))
-                    // TODO set to green
+                    // answers.forEach(element => element.classList.add("wrong-answer"))
+
+                    answers.forEach(element => {
+                        element.classList.remove("selected");
+                        element.removeEventListener("click", (e) => {
+                            answers.forEach(giglo => giglo.classList.remove("selected"))
+                            element.classList.add("selected")
+                            let clicked = e.target as HTMLLabelElement;
+                            if (typeof clicked.dataset.index !== "undefined") {
+                                user.selectedIndex = parseInt(clicked.dataset.index);
+                            }
+                        })
+                    });
+                    answers[answerResponse.correctAnswerIndex].classList.add("correct-answer");
+                    answers[answerResponse.correctAnswerIndex].classList.remove("wrong-answer");
                 } else {
                     quizContainer.classList.add("wrong");
                     questionContainer.classList.add("wrong");
                     answerContainer.classList.add("wrong");
-                    // TODO set to red
+
+                    answers.forEach(element => {
+                        element.classList.remove("selected");
+                        element.removeEventListener("click", (e) => {
+                            answers.forEach(giglo => giglo.classList.remove("selected"))
+                            element.classList.add("selected")
+                            let clicked = e.target as HTMLLabelElement;
+                            if (typeof clicked.dataset.index !== "undefined") {
+                                user.selectedIndex = parseInt(clicked.dataset.index);
+                            }
+                        })
+                    });
+                    answers[answerResponse.correctAnswerIndex].classList.add("correct-answer");
+                    answers[user.selectedIndex].classList.add("wrong-answer");
                 }
                 explanationElement.innerHTML = answerResponse.explanation;
             }
@@ -91,8 +115,11 @@ confirmElement.addEventListener("click", async () => {
 
 nextQuestionArrow!.addEventListener("click", async () => {
     if (user.hasAnswered) {
-        answers.forEach(element => element.classList.remove("wrong-answer"))
-        answers.forEach(element => element.classList.remove("selected"))
+        answers.forEach(element => {
+            element.classList.remove("wrong-answer")
+            element.classList.remove("correct-answer")
+            element.classList.remove("selected")
+        })
 
         quizContainer.classList.remove("correct");
         questionContainer.classList.remove("correct");
@@ -101,6 +128,15 @@ nextQuestionArrow!.addEventListener("click", async () => {
         quizContainer.classList.remove("wrong");
         questionContainer.classList.remove("wrong");
         answerContainer.classList.remove("wrong");
+
+        answers.forEach(element => element.addEventListener("click", (e) => {
+            answers.forEach(giglo => giglo.classList.remove("selected"))
+            element.classList.add("selected")
+            let clicked = e.target as HTMLLabelElement;
+            if (typeof clicked.dataset.index !== "undefined") {
+                user.selectedIndex = parseInt(clicked.dataset.index);
+            }
+        }))
         // Reset user
         user.currentQuestion = "";
         user.answers = new Array<string>;
