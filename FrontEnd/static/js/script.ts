@@ -5,6 +5,9 @@ const explanationElement = document.querySelector(".complete-answer") as HTMLPar
 const confirmElement = document.querySelector(".confirmBox") as HTMLDivElement;
 const questionElement = document.querySelector(".question") as HTMLParagraphElement;
 const nextQuestionArrow = document.querySelector(".right-arrow");
+const quizContainer = document.querySelector(".quiz") as HTMLDivElement;
+const questionContainer = document.querySelector(".question") as HTMLParagraphElement;
+const answerContainer = document.querySelector(".answer-container") as HTMLDivElement;
 
 let limit = true;
 const letters: Array<string> = [
@@ -66,11 +69,20 @@ confirmElement.addEventListener("click", async () => {
             let answerResponse = await sendAnswer(user.guid, user.selectedIndex);
             if (isInterface<SendAnswerResponse>(answerResponse)) {
                 if (answerResponse.correctAnswer) {
-                    explanationElement.innerHTML = answerResponse.explanation;
+                    quizContainer.classList.add("correct");
+                    questionContainer.classList.add("correct");
+                    answerContainer.classList.add("correct");
+
+                    answers.forEach(element => element.classList.add("wrong-answer"))
+                    answers.forEach(element => element.classList.remove("selected"))
                     // TODO set to green
                 } else {
+                    quizContainer.classList.add("wrong");
+                    questionContainer.classList.add("wrong");
+                    answerContainer.classList.add("wrong");
                     // TODO set to red
                 }
+                explanationElement.innerHTML = answerResponse.explanation;
             }
         }
         user.selectedIndex = -1;
@@ -79,6 +91,16 @@ confirmElement.addEventListener("click", async () => {
 
 nextQuestionArrow!.addEventListener("click", async () => {
     if (user.hasAnswered) {
+        answers.forEach(element => element.classList.remove("wrong-answer"))
+        answers.forEach(element => element.classList.remove("selected"))
+
+        quizContainer.classList.remove("correct");
+        questionContainer.classList.remove("correct");
+        answerContainer.classList.remove("correct");
+
+        quizContainer.classList.remove("wrong");
+        questionContainer.classList.remove("wrong");
+        answerContainer.classList.remove("wrong");
         // Reset user
         user.currentQuestion = "";
         user.answers = new Array<string>;

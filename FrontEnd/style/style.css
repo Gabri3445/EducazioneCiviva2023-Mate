@@ -44,6 +44,26 @@ body.darken {
     background-size: 100% 100%;
 }
 
+.correct {
+    border-color: #00ff15 !important;
+}
+
+.correct-answer {
+    text-shadow: 2px 0 #00ff15, -2px 0 #00ff15, 0 2px #00ff15, 0 -2px #00ff15,
+    1px 1px #00ff15, -1px -1px #00ff15, 1px -1px #00ff15, -1px 1px #00ff15;
+    font-size: 28px !important;
+}
+
+.wrong {
+    border-color: #fc0000 !important;
+}
+
+.wrong-answer {
+    text-shadow: 2px 0 #fc0000, -2px 0 #fc0000, 0 2px #fc0000, 0 -2px #fc0000,
+    1px 1px #fc0000, -1px -1px #fc0000, 1px -1px #fc0000, -1px 1px #fc0000;
+    font-size: 28px !important;
+}
+
 .whiteBG {
     position: absolute;
     width: 100vw;
@@ -140,7 +160,7 @@ input[type=text] {
     height: 500px;
 }
 
-#quiz {
+.quiz {
     font-size: 20px;
     display: flex;
     justify-content: space-around;
@@ -150,7 +170,9 @@ input[type=text] {
     width: 95%;
     height: 90%;
     background: linear-gradient(90deg, rgba(13, 201, 17, .9) 0%, rgba(240, 240, 240, .5) 50%, rgba(255, 0, 0, .9) 100%);
-    border: 7px solid yellow;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #faff00;
 }
 
 .question {
@@ -172,12 +194,12 @@ input[type=text] {
 .answers.selected {
     text-shadow: 2px 0 #faff00, -2px 0 #faff00, 0 2px #faff00, 0 -2px #faff00,
     1px 1px #faff00, -1px -1px #faff00, 1px -1px #faff00, -1px 1px #faff00;
-    font-size: 45px;
+    font-size: 28px;
 }
 
 .answers {
     font-weight: 900;
-    font-size: 40px;
+    font-size: 30px;
     height: 70px;
     transition: all .2s;
 }
