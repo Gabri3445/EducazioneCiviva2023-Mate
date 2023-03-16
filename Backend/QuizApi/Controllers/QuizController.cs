@@ -99,6 +99,12 @@ public class QuizController : ControllerBase
 
         var explanation = string.Empty;
 
+        var index = -1;
+
+        for (var i = 0; i < question.Answers.Count; i++)
+            if (question.Answers[i].IsCorrect)
+                index = i;
+
         if (isCorrect)
         {
             var filter = Builders<User>.Filter.Eq(x => x.Id, sendAnswerRequest.UserGuid);
@@ -111,7 +117,7 @@ public class QuizController : ControllerBase
             "{UserId} sent an answer with index: {AnswerIndex}. Correct: {IsCorrect}. Explanation: {Explanation}",
             user.Id, sendAnswerRequest.AnswerIndex, isCorrect, explanation);
 
-        return Ok(new SendAnswerResponse(isCorrect, explanation));
+        return Ok(new SendAnswerResponse(isCorrect, explanation, index));
     }
 
     [HttpGet("GetLeaderboard")]

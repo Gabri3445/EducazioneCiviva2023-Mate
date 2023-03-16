@@ -24,13 +24,16 @@ public class GetQuestionResponse
 
 public class SendAnswerResponse
 {
-    public SendAnswerResponse(bool correctAnswer, string explanation)
+    public SendAnswerResponse(bool correctAnswer, string explanation, int correctAnswerIndex)
     {
         CorrectAnswer = correctAnswer;
         Explanation = explanation;
+        CorrectAnswerIndex = correctAnswerIndex;
     }
 
     public bool CorrectAnswer { get; set; }
+
+    public int CorrectAnswerIndex { get; set; }
 
     public string Explanation { get; set; }
 }
