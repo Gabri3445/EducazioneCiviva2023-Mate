@@ -149,7 +149,7 @@ nextQuestionArrow!.addEventListener("click", async () => {
 })
 
 async function getNewQuestion(username: string) {
-    const createResponse = await createUser(username);
+    const createResponse = await createUser(username); // TODO fix this, creates a new user each time
     if (isInterface<CreateUserResponse>(createResponse)) {
         let guid = createResponse.id;
         const questionResponse = await getQuestion(guid);
