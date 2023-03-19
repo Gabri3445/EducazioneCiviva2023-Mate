@@ -131,8 +131,8 @@ public class QuizController : ControllerBase
             .OrderBy(x => x.Score)
             .Select(x => new {x.Username, x.Score})
             .ToList();
-        var usernames = leaderboard.Select(x => x.Username).ToList();
-        var scores = leaderboard.Select(x => x.Score).ToList();
+        var usernames = leaderboard.Select(x => x.Username).Reverse().ToList();
+        var scores = leaderboard.Select(x => x.Score).Reverse().ToList();
         _logger.Log(LogLevel.Information, "Requested leaderboard");
         return Ok(new GetLeaderBoardResponse(usernames, scores));
     }
