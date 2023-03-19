@@ -15,7 +15,7 @@ const letters: Array<string> = [
     "B) ",
     "C) ",
     "D) "
-]
+];
 
 
 let user: User;
@@ -37,28 +37,34 @@ class User {
 }
 
 form!.addEventListener("submit", async (e: SubmitEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (limit) {
         limit = false;
         const usernameInput = document.getElementsByName("username")[0] as HTMLInputElement;
         const username = usernameInput.value;
-        await getNewQuestion(username);
+        const createResponse = await createUser(username);
+        if (isInterface<CreateUserResponse>(createResponse)) {
+            let questionResponse = await getNewQuestion(createResponse.id);
+            if (isInterface<GetQuestionResponse>(questionResponse)) {
+                user = new User(createResponse.id, username, questionResponse.questionString, questionResponse.answers);
+            }
+        }
         const parent = form!.parentNode as HTMLElement; // ! means value can't be null
         parent.classList.add("hidden");
         whiteBG!.classList.add("hidden");
-        document.querySelector("body")!.classList.remove("darken") // same thing here
+        document.querySelector("body")!.classList.remove("darken"); // same thing here
     }
 
-})
+});
 
 answers.forEach(element => element.addEventListener("click", (e) => {
-    answers.forEach(giglo => giglo.classList.remove("selected"))
-    element.classList.add("selected")
+    answers.forEach(giglo => giglo.classList.remove("selected"));
+    element.classList.add("selected");
     let clicked = e.target as HTMLLabelElement;
     if (typeof clicked.dataset.index !== "undefined") {
         user.selectedIndex = parseInt(clicked.dataset.index);
     }
-}))
+}));
 
 
 confirmElement.addEventListener("click", async () => {
@@ -77,13 +83,13 @@ confirmElement.addEventListener("click", async () => {
                     answers.forEach(element => {
                         element.classList.remove("selected");
                         element.removeEventListener("click", (e) => {
-                            answers.forEach(giglo => giglo.classList.remove("selected"))
-                            element.classList.add("selected")
+                            answers.forEach(giglo => giglo.classList.remove("selected"));
+                            element.classList.add("selected");
                             let clicked = e.target as HTMLLabelElement;
                             if (typeof clicked.dataset.index !== "undefined") {
                                 user.selectedIndex = parseInt(clicked.dataset.index);
                             }
-                        })
+                        });
                     });
                     answers[answerResponse.correctAnswerIndex].classList.add("correct-answer");
                     answers[answerResponse.correctAnswerIndex].classList.remove("wrong-answer");
@@ -95,13 +101,13 @@ confirmElement.addEventListener("click", async () => {
                     answers.forEach(element => {
                         element.classList.remove("selected");
                         element.removeEventListener("click", (e) => {
-                            answers.forEach(giglo => giglo.classList.remove("selected"))
-                            element.classList.add("selected")
+                            answers.forEach(giglo => giglo.classList.remove("selected"));
+                            element.classList.add("selected");
                             let clicked = e.target as HTMLLabelElement;
                             if (typeof clicked.dataset.index !== "undefined") {
                                 user.selectedIndex = parseInt(clicked.dataset.index);
                             }
-                        })
+                        });
                     });
                     answers[answerResponse.correctAnswerIndex].classList.add("correct-answer");
                     answers[user.selectedIndex].classList.add("wrong-answer");
@@ -111,15 +117,15 @@ confirmElement.addEventListener("click", async () => {
         }
         user.selectedIndex = -1;
     }
-})
+});
 
 nextQuestionArrow!.addEventListener("click", async () => {
     if (user.hasAnswered) {
         answers.forEach(element => {
-            element.classList.remove("wrong-answer")
-            element.classList.remove("correct-answer")
-            element.classList.remove("selected")
-        })
+            element.classList.remove("wrong-answer");
+            element.classList.remove("correct-answer");
+            element.classList.remove("selected");
+        });
 
         quizContainer.classList.remove("correct");
         questionContainer.classList.remove("correct");
@@ -130,37 +136,33 @@ nextQuestionArrow!.addEventListener("click", async () => {
         answerContainer.classList.remove("wrong");
 
         answers.forEach(element => element.addEventListener("click", (e) => {
-            answers.forEach(giglo => giglo.classList.remove("selected"))
-            element.classList.add("selected")
+            answers.forEach(giglo => giglo.classList.remove("selected"));
+            element.classList.add("selected");
             let clicked = e.target as HTMLLabelElement;
             if (typeof clicked.dataset.index !== "undefined") {
                 user.selectedIndex = parseInt(clicked.dataset.index);
             }
-        }))
+        }));
         // Reset user
         user.currentQuestion = "";
         user.answers = new Array<string>;
         user.selectedIndex = -1;
-        user.hasAnswered = false
+        user.hasAnswered = false;
         // Get new question and answers
         explanationElement.innerHTML = "";
-        await getNewQuestion(user.username);
+        await getNewQuestion(user.guid);
     }
-})
+});
 
-async function getNewQuestion(username: string) {
-    const createResponse = await createUser(username); // TODO fix this, creates a new user each time
-    if (isInterface<CreateUserResponse>(createResponse)) {
-        let guid = createResponse.id;
-        const questionResponse = await getQuestion(guid);
-        if (isInterface<GetQuestionResponse>(questionResponse)) {
-            user = new User(guid, username, questionResponse.questionString, questionResponse.answers);
-            for (let i = 0; i < user.answers.length; i++) {
-                answers[i].innerHTML = letters[i] + user.answers[i];
-            }
-            questionElement.innerHTML = questionResponse.questionString;
-        } else {
-            console.error(questionResponse)
+async function getNewQuestion(guid: string): Promise<string | GetQuestionResponse> {
+    const questionResponse = await getQuestion(guid);
+    if (isInterface<GetQuestionResponse>(questionResponse)) {
+        for (let i = 0; i < user.answers.length; i++) {
+            answers[i].innerHTML = letters[i] + user.answers[i];
         }
+        questionElement.innerHTML = questionResponse.questionString;
+    } else {
+        console.error(questionResponse);
     }
+    return questionResponse;
 }
