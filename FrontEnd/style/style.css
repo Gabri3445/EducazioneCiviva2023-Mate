@@ -39,9 +39,45 @@ body.darken {
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 40px;
-    font-weight: bold;
     background: no-repeat url("../static/images/leaderboard.png");
     background-size: 100% 100%;
+}
+
+.userContainer {
+    width: 650px;
+    height: 360px;
+    overflow: scroll;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.userContainer::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.userContainer::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+
+.userContainer::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 4px;
+}
+
+.userContainer::-webkit-scrollbar-thumb:hover {
+    background-color: #0062cc;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    /* TODO add a border */
+}
+
+.user:first-child {
+    margin-top: 0;
 }
 
 .correct {
