@@ -8,6 +8,8 @@ const nextQuestionArrow = document.querySelector(".right-arrow");
 const quizContainer = document.querySelector(".quiz") as HTMLDivElement;
 const questionContainer = document.querySelector(".question") as HTMLParagraphElement;
 const answerContainer = document.querySelector(".answer-container") as HTMLDivElement;
+const leaderboardContainer = document.querySelector("#leaderboardContainer") as HTMLDivElement;
+const leaderboardUserContainer = document.querySelector(".userContainer") as HTMLDivElement;
 
 let limit = true;
 const letters: Array<string> = [
@@ -165,4 +167,16 @@ async function getNewQuestion(guid: string): Promise<string | GetQuestionRespons
         console.error(questionResponse);
     }
     return questionResponse;
+}
+
+// TODO Call this function when the questions answered reaches 20
+async function showLeaderboard() {
+    leaderboardUserContainer.innerHTML = "";
+    let leaderboardResponse = await getLeaderboard();
+    if (isInterface<GetLeaderBoardResponse>(leaderboardResponse)) {
+        for (let i = 0; i < leaderboardResponse.scores.length && i < leaderboardResponse.usernames.length; i++) {
+            leaderboardUserContainer.innerHTML += `<div class="user"><span class="username">${leaderboardResponse.usernames[i]}</span><span class="score">${leaderboardResponse.scores[i]}</span></div>`
+        }
+    }
+    leaderboardContainer.classList.remove("hidden");
 }
