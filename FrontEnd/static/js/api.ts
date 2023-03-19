@@ -1,6 +1,6 @@
 //let url = "http://localhost:5258/api/Quiz/"
 
-const url = "http://gabri3445.ddns.net/api/Quiz/"
+const url = "http://gabri3445.ddns.net/api/Quiz/";
 
 async function postData(url: string = '', data = {}) {
     // Default options are marked with *
@@ -35,7 +35,7 @@ async function putData(url: string = '', data = {}) {
 }
 
 function isInterface<T>(obj: any,): obj is T {
-    return typeof obj === 'object' && obj !== null
+    return typeof obj === 'object' && obj !== null;
 }
 
 async function ping(): Promise<string> {
@@ -48,11 +48,11 @@ async function ping(): Promise<string> {
 }
 
 interface CreateUserResponse {
-    id: string
+    id: string;
 }
 
 async function createUser(username: string): Promise<string | CreateUserResponse> {
-    let createUrl = url + "CreateUser"
+    let createUrl = url + "CreateUser";
     if (username === "") {
         return "Empty Username";
     }
@@ -65,7 +65,7 @@ async function createUser(username: string): Promise<string | CreateUserResponse
         return response.json();
     }
     if (statusCode === 400) {
-        return "Empty username"
+        return "Empty username";
     }
     return "";
 }
@@ -89,7 +89,7 @@ async function getQuestion(guid: string): Promise<string | GetQuestionResponse> 
         return "Invalid Guid";
     }
     if (statusCode === 404) {
-        return "User not found"
+        return "User not found";
     }
     return "";
 }
@@ -108,7 +108,7 @@ async function sendAnswer(guid: string, answerIndex: number): Promise<string | S
     let data = {
         userGuid: guid,
         answerIndex: answerIndex
-    }
+    };
     let response = await putData(sendUrl, data);
     let statusCode = response.status;
     if (statusCode === 200) {
@@ -118,9 +118,9 @@ async function sendAnswer(guid: string, answerIndex: number): Promise<string | S
         return "Invalid Guid";
     }
     if (statusCode === 404) {
-        return "User not found"
+        return "User not found";
     }
-    return ""
+    return "";
 }
 
 interface GetLeaderBoardResponse {
