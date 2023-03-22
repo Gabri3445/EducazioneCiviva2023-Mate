@@ -1,6 +1,6 @@
 const answers = document.querySelectorAll(".answers") as unknown as Array<HTMLLabelElement>;
 const form = document.getElementById("form");
-const whiteBG = document.querySelector(".whiteBG");
+const whiteBG = document.querySelectorAll(".whiteBG");
 const explanationElement = document.querySelector(".complete-answer") as HTMLParagraphElement;
 const confirmElement = document.querySelector(".confirmBox") as HTMLDivElement;
 const questionElement = document.querySelector(".question") as HTMLParagraphElement;
@@ -53,7 +53,7 @@ form!.addEventListener("submit", async (e: SubmitEvent) => {
         }
         const parent = form!.parentNode as HTMLElement; // ! means value can't be null
         parent.classList.add("hidden");
-        whiteBG!.classList.add("hidden");
+        whiteBG[1]!.classList.add("hidden");
         document.querySelector("body")!.classList.remove("darken"); // same thing here
     }
 
