@@ -10,6 +10,7 @@ const questionContainer = document.querySelector(".question") as HTMLParagraphEl
 const answerContainer = document.querySelector(".answer-container") as HTMLDivElement;
 const leaderboardContainer = document.querySelector("#leaderboardContainer") as HTMLDivElement;
 const leaderboardUserContainer = document.querySelector(".userContainer") as HTMLDivElement;
+const questionCounter = document.querySelector(".current-question") as HTMLParagraphElement;
 
 let limit = true;
 const letters: Array<string> = [
@@ -22,18 +23,21 @@ const letters: Array<string> = [
 let user: User;
 
 class User {
+
     guid: string;
     username: string;
     currentQuestion: string;
     answers: Array<string>;
     selectedIndex: number = -1;
     hasAnswered: boolean = false;
+    questionCounter: number = 0;
 
-    constructor(guid: string, username: string, currentQuestion: string, answers: Array<string>) {
+    constructor(guid: string, username: string, currentQuestion: string, answers: Array<string>, questionCounter: number) {
         this.guid = guid;
         this.username = username;
         this.currentQuestion = currentQuestion;
         this.answers = answers;
+        this.questionCounter = questionCounter;
     }
 }
 
@@ -47,7 +51,7 @@ form!.addEventListener("submit", async (e: SubmitEvent) => {
         if (isInterface<CreateUserResponse>(createResponse)) {
             let questionResponse = await getNewQuestion(createResponse.id);
             if (isInterface<GetQuestionResponse>(questionResponse)) {
-                user = new User(createResponse.id, username, questionResponse.questionString, questionResponse.answers);
+                user = new User(createResponse.id, username, questionResponse.questionString, questionResponse.answers, 0);
             }
         }
         const parent = form!.parentNode as HTMLElement; // ! means value can't be null
@@ -127,6 +131,13 @@ nextQuestionArrow!.addEventListener("click", async () => {
             element.classList.remove("correct-answer");
             element.classList.remove("selected");
         });
+
+        if (user.questionCounter <= 20) {
+            user.questionCounter++;
+            questionCounter.innerHTML = "" + user.questionCounter;
+        } else {
+            showLeaderboard();
+        }
 
         quizContainer.classList.remove("correct");
         questionContainer.classList.remove("correct");
