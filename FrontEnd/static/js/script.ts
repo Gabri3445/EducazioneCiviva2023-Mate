@@ -131,13 +131,6 @@ nextQuestionArrow!.addEventListener("click", async () => {
             element.classList.remove("selected");
         });
 
-        if (user.questionCounter <= 20) {
-            user.questionCounter++;
-            questionCounter.innerHTML = "" + user.questionCounter;
-        } else {
-            showLeaderboard();
-        }
-
         quizContainer.classList.remove("correct");
         questionContainer.classList.remove("correct");
         answerContainer.classList.remove("correct");
@@ -154,6 +147,8 @@ nextQuestionArrow!.addEventListener("click", async () => {
                 user.selectedIndex = parseInt(clicked.dataset.index);
             }
         }));
+
+
         // Reset user
         user.currentQuestion = "";
         user.answers = new Array<string>;
@@ -161,7 +156,15 @@ nextQuestionArrow!.addEventListener("click", async () => {
         user.hasAnswered = false;
         // Get new question and answers
         explanationElement.innerHTML = "";
-        await getNewQuestion(user.guid);
+        if (typeof user !== "undefined") {
+            if (user.questionCounter < 19) {
+                user.questionCounter++;
+                questionCounter.innerHTML = String(user.questionCounter + 1);
+                await getNewQuestion(user.guid);
+            } else {
+                await showLeaderboard();
+            }
+        }
     }
 });
 
@@ -184,7 +187,7 @@ async function showLeaderboard() {
     let leaderboardResponse = await getLeaderboard();
     if (isInterface<GetLeaderBoardResponse>(leaderboardResponse)) {
         for (let i = 0; i < leaderboardResponse.scores.length && i < leaderboardResponse.usernames.length; i++) {
-            leaderboardUserContainer.innerHTML += `<div class="user"><span class="username">${leaderboardResponse.usernames[i]}</span><span class="score">${leaderboardResponse.scores[i]}</span></div>`
+            leaderboardUserContainer.innerHTML += `<div class="user"><span class="username">${leaderboardResponse.usernames[i]}</span><span class="score">${leaderboardResponse.scores[i]}</span></div>`;
         }
     }
     leaderboardContainer.classList.remove("hidden");
