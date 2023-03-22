@@ -159,8 +159,8 @@ nextQuestionArrow!.addEventListener("click", async () => {
 async function getNewQuestion(guid: string): Promise<string | GetQuestionResponse> {
     const questionResponse = await getQuestion(guid);
     if (isInterface<GetQuestionResponse>(questionResponse)) {
-        for (let i = 0; i < user.answers.length; i++) {
-            answers[i].innerHTML = letters[i] + user.answers[i];
+        for (let i = 0; i < questionResponse.answers.length; i++) {
+            answers[i].innerHTML = letters[i] + questionResponse.answers[i];
         }
         questionElement.innerHTML = questionResponse.questionString;
     } else {
