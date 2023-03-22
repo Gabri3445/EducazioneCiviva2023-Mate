@@ -69,6 +69,23 @@ body.darken {
     background-color: #0062cc;
 }
 
+.question-counterBox {
+    width: 120px;
+    background: #fc0000;
+    color: white;
+    border-radius: 20px 20px 0px 0px;
+    text-align: center;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #000000;
+}
+
+.question-counter {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 5px;
+}
+
 .user {
     display: flex;
     justify-content: space-between;
@@ -114,12 +131,14 @@ body.darken {
 }
 
 .confirmBox {
-    background: red;
+    margin-left: 100%;
+    transform: translateX(-100%);
+    background: #2f60ff;
     width: 120px;
-    border-top-width: 3px;
-    border-top-style: solid;
-    border-top-color: #000000;
-    border-radius: 20px 20px 0px 0px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 10px 10px 10px 10px;
     text-align: center;
     display: flex;
     align-items: center;
