@@ -87,10 +87,15 @@ body.darken {
 }
 
 .user {
+    align-items: center;
+    font-weight: 900;
+    font-size: 30px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    /* TODO add a border */
+    border-bottom-width: 7px;
+    border-bottom-style: solid;
+    border-color: rgba(143, 66, 0, 0.45);
 }
 
 .user:first-child {
@@ -102,9 +107,11 @@ body.darken {
 }
 
 .correct-answer {
-    text-shadow: 2px 0 #00ff15, -2px 0 #00ff15, 0 2px #00ff15, 0 -2px #00ff15,
-    1px 1px #00ff15, -1px -1px #00ff15, 1px -1px #00ff15, -1px 1px #00ff15;
     font-size: 28px !important;
+    justify-content: center;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #00FF15FF;
 }
 
 .wrong {
@@ -112,9 +119,11 @@ body.darken {
 }
 
 .wrong-answer {
-    text-shadow: 2px 0 #fc0000, -2px 0 #fc0000, 0 2px #fc0000, 0 -2px #fc0000,
-    1px 1px #fc0000, -1px -1px #fc0000, 1px -1px #fc0000, -1px 1px #fc0000;
     font-size: 28px !important;
+    justify-content: center;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #FC0000FF;
 }
 
 .whiteBG {
@@ -224,7 +233,7 @@ input[type=text] {
     margin: auto;
     width: 95%;
     height: 90%;
-    background: linear-gradient(90deg, rgba(13, 201, 17, .9) 0%, rgba(240, 240, 240, .5) 50%, rgba(255, 0, 0, .9) 100%);
+    background: linear-gradient(90deg, rgba(13, 180, 17, .9) 0%, rgba(240, 240, 240, .5) 50%, rgba(180, 0, 0) 100%);
     border-width: 7px;
     border-style: solid;
     border-color: #faff00;
@@ -247,9 +256,10 @@ input[type=text] {
 }
 
 .answers.selected {
-    text-shadow: 2px 0 #faff00, -2px 0 #faff00, 0 2px #faff00, 0 -2px #faff00,
-    1px 1px #faff00, -1px -1px #faff00, 1px -1px #faff00, -1px 1px #faff00;
-    font-size: 28px;
+    justify-content: center;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #FCFF00;
 }
 
 .answers {

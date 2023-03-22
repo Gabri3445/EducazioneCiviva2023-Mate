@@ -19,7 +19,6 @@ const letters: Array<string> = [
     "D) "
 ];
 
-
 let user: User;
 
 class User {
