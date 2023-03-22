@@ -32,12 +32,11 @@ class User {
     hasAnswered: boolean = false;
     questionCounter: number = 0;
 
-    constructor(guid: string, username: string, currentQuestion: string, answers: Array<string>, questionCounter: number) {
+    constructor(guid: string, username: string, currentQuestion: string, answers: Array<string>) {
         this.guid = guid;
         this.username = username;
         this.currentQuestion = currentQuestion;
         this.answers = answers;
-        this.questionCounter = questionCounter;
     }
 }
 
@@ -51,7 +50,7 @@ form!.addEventListener("submit", async (e: SubmitEvent) => {
         if (isInterface<CreateUserResponse>(createResponse)) {
             let questionResponse = await getNewQuestion(createResponse.id);
             if (isInterface<GetQuestionResponse>(questionResponse)) {
-                user = new User(createResponse.id, username, questionResponse.questionString, questionResponse.answers, 0);
+                user = new User(createResponse.id, username, questionResponse.questionString, questionResponse.answers);
             }
         }
         const parent = form!.parentNode as HTMLElement; // ! means value can't be null
